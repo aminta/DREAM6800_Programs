@@ -8,7 +8,7 @@ simulation of the machine and offered as ready-to-load files.
 
 - `.c8` = CHIP-8 program at 0200 (start with `C000`, `FN 3`); `.d68` = 2 bytes load address +
   2 bytes run address (big-endian) + data.
-- Made for the DREAM 6800 MiSTer core (release coming soon); they work on
+- Made for the [DREAM 6800 MiSTer core](https://github.com/aminta/DREAM6800_MiSTer); they work on
   real hardware too (type in the listing, or convert to a tape).
 - Every page credits the author and the source (issue, page). **Removal on request**: if you
   wrote one of these programs (or are an heir) and want it taken down, open an issue.

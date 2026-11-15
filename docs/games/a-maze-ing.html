@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A-Maze-ing – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>A-Maze-ing</h1>
+<p class="by">Graeme V. Samways · DREAMER no. 13 (1981-09) p. 9 <span class="badge">2K RAM</span></p>
+<div class="shots"><img src="../shots/a-maze-ing-1.png" alt="A-Maze-ing screen 1" width="512" height="256"><img src="../shots/a-maze-ing-2.png" alt="A-Maze-ing screen 2" width="512" height="256"><img src="../shots/a-maze-ing-3.png" alt="A-Maze-ing screen 3" width="512" height="256"></div>
+<p class="desc">Draw a maze with the cursor, drop some food, then release a mouse at the entrance and watch it search for the food. Hold 3 to interrupt the search. When it finds the food, B repeats the same maze and F wipes the screen. The &#x27;dead-end&#x27; data lives in 0400-05FF, so 2K are needed.</p>
+<h2>Keys</h2><p>4/5/6/8/A/C/D/E move the cursor, 2 sets a wall, 0 drops food, 1 frees the mouse, 3 stops, B/F afterwards.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/A-Maze-ing.d68" download>A-Maze-ing.d68</a></td><td>main</td><td>0080-03FF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/a_maze_ing.txt">a_maze_ing.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_13/page/n10/mode/1up">DREAMER no. 13 on archive.org</a>, p. 9 (PDF page 11).
+Author: Graeme V. Samways.</p>
+<h2>Corrections applied</h2><p>None.</p>
+<h2>Open doubts</h2><ul><li>Key digits in 024A-0278 are overwritten by hand on the scan; the article&#x27;s key table was used.</li><li>0294 = 76C2, perhaps 8AC2; kept.</li><li>03FE faint, read 13E2.</li><li>Tested with the RAM size set to 1.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

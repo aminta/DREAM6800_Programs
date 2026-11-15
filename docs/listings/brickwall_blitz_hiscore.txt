@@ -1,0 +1,6 @@
+# BRICKWALL BLITZ high score routine - L.M. Flood - DREAMER 19 p.4 (PDF page 6) - CHIP-8 0400-0433
+# For systems with more than 1K: load after brickwall_blitz.txt and change 00AC from 0000 to 1400.
+0400 8400 8510 8025 3F01 1414 3000 1420 8135
+0410 3F00 1420 8020 8130 A0F9 F155 8420 8530
+0420 A42E 6A08 6B07 DAB5 6A10 20BE 10AE A8AA
+0430 E8AA A800

@@ -1,0 +1,23 @@
+# ASTEROID BELT - J. Fisher - DREAMER 14 p.16 (PDF page 18) - CHIP-8 0200-02FF, run C000
+# Steer a 2x2 square from the top left corner to the bottom right corner with as few crashes
+# (asteroids or border) as possible; it never stops. After the border is drawn key the speed
+# 0 (fast) to F (slow); recommended 8 for beginners. Keys 5 up, 8 left, A right, D down
+# (the article's key list has a handwritten 8 over the second key; the code at 0262-027C uses
+# 5/8/A/D via V3-V6). At the end the number of crashes is shown; any key except F restarts
+# (F = F000, back to the monitor).
+0200 6919 6305 6408 650A 660D A2EF 6D00 22D4
+0210 6D1F 22D4 A2EE 6C00 22E0 6C3F 22E0 6700
+0220 6800 FE0A A2F0 FE1E F065 8E00 A2EC 6C01
+0230 6D01 DCD2 6C3D 6D1D DCD2 A2EE CC3F CD1F
+0240 DCD1 3F01 124A DCD1 123C 7801 3864 123C
+0250 A2EC 6C3D 6D1D DCD2 6C01 6D01 6A00 6B00
+0260 FE15 E39E 126A 6A00 6BFF E49E 1272 6AFF
+0270 6B00 E59E 127A 6A01 6B00 E69E 1282 6A00
+0280 6B01 DCD2 8CA4 8DB4 DCD2 4F01 129E 3C3D
+0290 1296 4D1D 12AC F807 3800 1296 1260 F918
+02A0 DCD2 7701 6C01 6D01 DCD2 125C F918 00E0
+02B0 6C18 6D0D A300 F733 F265 F029 DCD5 7C05
+02C0 F129 DCD5 7C05 F229 DCD5 F80A 480F F000
+02D0 00E0 120A 6C00 DCD1 7C08 3C40 12D6 00EE
+02E0 6D01 DCD1 7D01 3D1F 12E2 00EE C0C0 80FF
+02F0 0203 0405 0608 0A0D 1014 1920 2832 4050

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brickwall Blitz – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Brickwall Blitz</h1>
+<p class="by">L.M. Flood · DREAMER no. 19 (1982) p. 3 <span class="badge">2K RAM</span></p>
+<div class="shots"><img src="../shots/brickwall-blitz-1.png" alt="Brickwall Blitz screen 1" width="512" height="256"><img src="../shots/brickwall-blitz-2.png" alt="Brickwall Blitz screen 2" width="512" height="256"><img src="../shots/brickwall-blitz-3.png" alt="Brickwall Blitz screen 3" width="512" height="256"></div>
+<p class="desc">Bricks fall from space and pile up into a wall that you must destroy, by catching bricks with your base and dropping them on it. The game ends when the wall reaches the base and shows the survival time. A high score routine for machines with more than 1K can be added.</p>
+<h2>Keys</h2><p>4 left, 6 right, F fire a caught brick.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Brickwall Blitz.d68" download>Brickwall Blitz.d68</a></td><td>main</td><td>0080-03FF</td><td>C000</td></tr><tr><td><a href="../files/Brickwall Blitz (high score).d68" download>Brickwall Blitz (high score).d68</a></td><td>high score</td><td>0080-0433</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/brickwall_blitz.txt">brickwall_blitz.txt</a>, <a href="../listings/brickwall_blitz_hiscore.txt">brickwall_blitz_hiscore.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_19/page/n3/mode/1up">DREAMER no. 19 on archive.org</a>, p. 3 (PDF page 4).
+Author: L.M. Flood.</p>
+<h2>Corrections applied</h2><ul><li>03BD B0 -&gt; BD (the call to the CHIPOS show routine, as in the twin routine at 02F5-0300; otherwise the brick/base test at 035D never draws; not a published erratum).</li><li>High score version: 00AC 0000 -&gt; 1400 and extra routine 0400-0433.</li></ul>
+<h2>Open doubts</h2><p>None.</p></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

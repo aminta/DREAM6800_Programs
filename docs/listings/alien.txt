@@ -1,0 +1,35 @@
+# ALIEN - K. Bolch (Warragul) - DREAMER 3 p.11 (PDF page 13) - CHIP-8 0080-02FF (printed range 0080-0300)
+# run C000 (FN 3). Three bases against the aliens; an extra base if you shoot ten or more aliens.
+# Bullets can be steered by moving the base. When you are hit or hit an alien, the score is flashed
+# on the right and the number of bases left on the left.
+# keys: 0 left, 2 right, 1 fire. Article: to use C, D & E change 021F (fire), 0225 (left), 022B (right)
+# (printed values struck out on the scan, presumably 0D, 0C, 0E).
+# The scanned copy has a reader's hand-written key remap (keys 4, F, 6): 021F -> 0F, 0225 -> 04,
+# 022B -> 06, written over the printed digits, which are unreadable. NOT applied: the printed values
+# are restored from the article (0 left, 2 right, 1 fire) and from the code (021E key -> 6501 fire flag;
+# 0224 key -> 0252 x-1 = left; 022A key -> 0262 x+1 = right): 021E 6401, 0224 6400, 022A 6402.
+# Mod for the score in DREAMER 12 (not applied).
+0080 6120 8A15 3F00 1082 8A14 8A85 4F00 10D2
+0090 72FF C401 4400 A0B4 4401 A0C3 6603 12CE
+00A0 EE8A 8AAA EEE2 4243 4242 A8AD AFAA AAA0
+00B0 A0A0 80A0 CEAA EAAA CEE8 ADAF AAEA 9090
+00C0 9080 9097 A5C7 A595 7755 7545 4745 4555
+00D0 2829 7301 A0A0 430A 7201 6604 12CE 8AB0
+00E0 6816 1080 8AE0 681B 1080 00E0 3200 1204
+00F0 F00A 1200 0000 10BA EEFE 9224 FFDB 3C24
+0200 6203 6300 A0FB 6B00 22BE DAB5 A0F6 601C
+0210 611B D015 661B D061 690B DDE1 6500 6401
+0220 E4A1 6501 6400 E4A1 1252 6402 E4A1 1262
+0230 4501 123A 1282 1272 121E D061 8655 4600
+0240 124A D061 4F01 10D2 1234 661B D061 6500
+0250 1234 D061 D015 70FF 4000 7001 D015 D061
+0260 122A D015 D061 7001 403A 70FF D015 D061
+0270 1230 DDE1 7E01 4E20 22BE DDE1 4F01 10E4
+0280 1238 A0FB DAB5 490B 22B0 7901 8A84 8BC4
+0290 4B20 6B00 6414 8B45 4F01 6C01 8B44 DAB5
+02A0 4F01 10DE A0F6 3C01 1236 3800 FC18 1236
+02B0 C803 78FE 48FE 12B0 6900 CC01 00EE 8DA0
+02C0 8EB0 6720 7E07 8E75 3F01 7E20 00EE 00E0
+02D0 6705 6410 6500 D455 76FF 7408 F71E 3600
+02E0 12D6 6410 6510 F229 D455 A02F 6420 F333
+02F0 F029 D455 7404 F129 D455 6440 F418 10EA

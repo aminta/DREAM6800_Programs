@@ -1,0 +1,2931 @@
+[
+ {
+  "id": "barrier",
+  "title": "Barrier",
+  "author": "Graeme V. Samways",
+  "issue": 1,
+  "date": "1980-09",
+  "page": 3,
+  "pdf_page": 3,
+  "archive_item": "dreamer_newsletter_01",
+  "files": [
+   {
+    "file": "Barrier.c8",
+    "label": "main",
+    "load": "0200-02CF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "barrier.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Speed 0-E at the start (F = accelerating); C left, D up, E down, F right.",
+  "description": "A snake of dots crawls across the screen and leaves a trail behind it. You steer it so that it never touches the border or its own tail. Pick a speed first, or let F make the game speed up as it goes.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "barrier",
+  "shots": [
+   "moving",
+   "end"
+  ]
+ },
+ {
+  "id": "bounce",
+  "title": "Bounce",
+  "author": "Graeme V. Samways",
+  "issue": 1,
+  "date": "1980-09",
+  "page": 4,
+  "pdf_page": 4,
+  "archive_item": "dreamer_newsletter_01",
+  "files": [
+   {
+    "file": "Bounce.d68",
+    "label": "main",
+    "load": "0090-00AF, 0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "bounce.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold C/D to move the bat left fast/slow, E/F right slow/fast; any key serves the ball.",
+  "description": "A breakout-style game with a bat along the bottom line and two blocks of random dots above it. You have 20 balls, and every bounce on the bottom line wipes out one dot of it. The score is the number of dots removed.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "bounce",
+  "shots": [
+   "start",
+   "serving",
+   "bat_left"
+  ]
+ },
+ {
+  "id": "sub",
+  "title": "Sub",
+  "author": "Graeme V. Samways",
+  "issue": 1,
+  "date": "1980-09",
+  "page": 7,
+  "pdf_page": 7,
+  "archive_item": "dreamer_newsletter_01",
+  "files": [
+   {
+    "file": "Sub.c8",
+    "label": "main",
+    "load": "0200-03FF",
+    "run": "C000"
+   },
+   {
+    "file": "Sub (Eight Direction).c8",
+    "label": "eight-direction joystick",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "sub.txt",
+   "sub_eight_direction.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold to move: 4/5/6 surface left/stay/right, 8/A left/right, C/D/E dive left/straight/right; fire 0 left, 1 up, 2 right. Eight-direction version: 5/8/A/D (two adjacent keys = diagonal), F fires.",
+  "description": "You command a submarine hunting enemy ships on the surface, with unlimited torpedoes (one in flight at a time) and depth charges dropped on you. Every ship you sink adds its speed to your score, which is shown when the sub itself is sunk. The issue 9 variant replaces the movement code so that a four-way paddle on keys 5/8/A/D drives the sub.",
+  "corrections": [
+   "Eight-direction version: rows 0230-02BF replaced by the 'Modified Sub Listing' of issue 9 (printed rows 02B0-02BB are zeros, the rest is the issue 1 listing)."
+  ],
+  "doubts": [
+   "Diagonal moves need two keys at once and were not tested."
+  ],
+  "status": "verified",
+  "test": "sub",
+  "shots": [
+   "start",
+   "torpedo",
+   "later"
+  ]
+ },
+ {
+  "id": "acey-duecey",
+  "title": "Acey Duecey",
+  "author": "Graeme V. Samways",
+  "issue": 2,
+  "date": "1980-10",
+  "page": 9,
+  "pdf_page": 9,
+  "archive_item": "dreamer_newsletter_02",
+  "files": [
+   {
+    "file": "Acey Duecey.c8",
+    "label": "main",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "acey_duecey.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0 draws the third number; any other key deals a new pair; F restarts when broke.",
+  "description": "Two random numbers are shown, the larger on the left, with their difference at the top left. Bet that a third random number lands between them: you win if it does and lose if it does not. When your money runs out the score is erased with a bleep.",
+  "corrections": [],
+  "doubts": [
+   "The article says a loss subtracts the difference, but the code (029A = 87E5) subtracts 256 minus the difference; left as printed."
+  ],
+  "status": "verified",
+  "test": "acey_duecey",
+  "shots": [
+   "start",
+   "after_0",
+   "new_pair"
+  ]
+ },
+ {
+  "id": "mine-field",
+  "title": "Mine Field",
+  "author": "Graeme V. Samways",
+  "issue": 2,
+  "date": "1980-10",
+  "page": 10,
+  "pdf_page": 10,
+  "archive_item": "dreamer_newsletter_02",
+  "files": [
+   {
+    "file": "Mine Field.c8",
+    "label": "main",
+    "load": "0200-037F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "mine_field.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "5 up, 8 left, A right, D down.",
+  "description": "Cross a grid from the top left corner to the bottom right while avoiding 10 hidden mines. Stepping on a mine adds one to your score, leaves a marker you cannot cross and sends you back to the start. The lower the score at the far corner, the better.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "mine_field",
+  "shots": [
+   "start",
+   "moved"
+  ]
+ },
+ {
+  "id": "mine-field-small",
+  "title": "Mine Field Small",
+  "author": "Graeme V. Samways",
+  "issue": 2,
+  "date": "1980-10",
+  "page": 11,
+  "pdf_page": 11,
+  "archive_item": "dreamer_newsletter_02",
+  "files": [
+   {
+    "file": "Mine Field Small.c8",
+    "label": "main",
+    "load": "0200-037F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "mine_field_small.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "5 up, 8 left, A right, D down.",
+  "description": "The same game as Mine Field at half scale: a single-pixel cursor on a bigger grid with many more mines. Placing the mines takes a few seconds at the start. Reach the opposite corner with as few hits as possible.",
+  "corrections": [
+   "0256 9E40 -> 9348 (erratum in issue 3, B. Ritter; CHIPOS ignores the low nibble of 9XYN, so it works like 9340 in Mine Field)."
+  ],
+  "doubts": [
+   "0286 is struck through by hand on the scan; read as 3C05 like the other key tests and like Mine Field.",
+   "The article says 100 mines, the code places 50."
+  ],
+  "status": "verified",
+  "test": "mine_field_small",
+  "shots": [
+   "start",
+   "moved"
+  ]
+ },
+ {
+  "id": "one-check",
+  "title": "One Check",
+  "author": "Graeme V. Samways",
+  "issue": 2,
+  "date": "1980-10",
+  "page": 12,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_02",
+  "files": [
+   {
+    "file": "One Check.c8",
+    "label": "main",
+    "load": "0200-035F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "one_check.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Key X (0-7) then Y (0-7) to pick a checker, then 4 up-left, 6 up-right, C down-left, E down-right to jump; any other key cancels.",
+  "description": "A solitaire on an 8x8 board with 48 checkers on the two outer rings, adapted from a BASIC program by David Ahl. You remove checkers by diagonal jumps and the score is the number removed: 30-39 is easy, 40-44 a challenge and 45-47 a real feat.",
+  "corrections": [
+   "02F8 4D04 -> 4B04 (up-left edge test must use VB like the other three directions; 4D04 wrongly refused an up-left jump from row 2 to row 0).",
+   "024A, 025C, 0270 covered by a reader's hand-written calls to his own routines; reconstructed as FC0A, FD0A, F80A from those routines and the surrounding code."
+  ],
+  "doubts": [
+   "0304 is a hand-retouched digit, read as 3806."
+  ],
+  "status": "verified",
+  "test": "one_check",
+  "shots": [
+   "start",
+   "move1",
+   "move2"
+  ]
+ },
+ {
+  "id": "spiral-trial",
+  "title": "Spiral Trial",
+  "author": "P.E. Marston",
+  "issue": 2,
+  "date": "1980-10",
+  "page": 13,
+  "pdf_page": 13,
+  "archive_item": "dreamer_newsletter_02",
+  "files": [
+   {
+    "file": "Spiral Trial.c8",
+    "label": "main",
+    "load": "0200-0357",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "spiral_trial.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold 4 left, 6 right, 1 up, 9 down.",
+  "description": "The computer draws a spiral and a countdown timer starts as you appear in its centre. Steer out through the gaps without touching a wall: a crash sends you back to the start. The game ends at the exit (time left is your score), after 5 crashes or when the timer hits 000.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "spiral_trial",
+  "shots": [
+   "start",
+   "moved",
+   "crash"
+  ]
+ },
+ {
+  "id": "the-snake",
+  "title": "The Snake",
+  "author": "R. Faint",
+  "issue": 3,
+  "date": "1980-11",
+  "page": 9,
+  "pdf_page": 11,
+  "archive_item": "dreamer_newsletter_03",
+  "files": [
+   {
+    "file": "The Snake.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   },
+   {
+    "file": "The Snake (slow).d68",
+    "label": "slow",
+    "load": "0080-03FF",
+    "run": "C000"
+   },
+   {
+    "file": "The Snake (redirected).d68",
+    "label": "redirected keys",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "the_snake.txt",
+   "the_snake_slow.txt",
+   "the_snake_redirected.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1 up, 4 left, 6 right, 9 down (redirected version: 5 up, 8 left, A right, D down); any key restarts.",
+  "description": "Guide a growing snake to the big square, worth 8 points per meal, while avoiding the walls, the small square and your own body. A short chime plays at the end if you scored enough. Two published patches slow the game down and move the controls to the 5/8/A/D diamond.",
+  "corrections": [
+   "'Slow' version: speed patch of issue 4 ('The Snake by the Tail', G.V. Samways): 0360 8F00 -> 8E00, 0364 80F0 -> 80E0, 0374 00EE -> 10F0 (low speed).",
+   "'Redirected' version: key patch of issue 8 ('Redirected Snake'): 023C 6006->600A, 024C 6B06->6B0A, 0252 6A01->6A05, 02F2 4001->4005, 0258 6A06->6A0A, 0272 4B06->4B0A, 02FE 4006->400A, 0264 6A04->6A08, 026A 4B04->4B08, 02F6 4004->4008, 025E 6A09->6A0D, 026E 4B09->4B0D, 02FA 4009->400D."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "the_snake",
+  "shots": [
+   "moving",
+   "left",
+   "game-over-score"
+  ]
+ },
+ {
+  "id": "three-reel-video-poker-machine",
+  "title": "Three Reel Video Poker Machine",
+  "author": "J. Panos",
+  "issue": 3,
+  "date": "1980-11",
+  "page": 10,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_03",
+  "files": [
+   {
+    "file": "Three Reel Video Poker Machine.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "three_reel_video_poker_machine.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "F spins the reels (costs 1); after a jackpot C cancels it and A adds it to the score.",
+  "description": "A three-reel fruit-machine style game that starts you on 50 points and charges one point per spin. Pairs and triples of 9, 10, J, Q, K, A and 7 pay out according to a table printed in the article. After an A-A-A or 7-7-7 jackpot you must press A to collect it.",
+  "corrections": [
+   "Issue 9 improvement by J. Panos applied: 0202 CA0F -> C80F, 0204 CB0F -> CD0F, 0206 CC0F -> CE0F, 027E 72FF -> 7201, 0286 3200 -> 3220 (stops the 9s showing at load and speeds up the cards).",
+   "00D0 D458 -> D45B (every other card draw is D45B: 11-row sprites spaced 0B apart; typewriter font confuses 8 and B; not a published erratum)."
+  ],
+  "doubts": [
+   "The jackpot path was not tested.",
+   "03B8 38B8 (sprite data) kept as printed, not double-checked."
+  ],
+  "status": "playable",
+  "test": "three_reel_video_poker_machine",
+  "shots": [
+   "start-score-050",
+   "spin1",
+   "spin2"
+  ]
+ },
+ {
+  "id": "alien",
+  "title": "Alien",
+  "author": "K. Bolch",
+  "issue": 3,
+  "date": "1980-11",
+  "page": 11,
+  "pdf_page": 13,
+  "archive_item": "dreamer_newsletter_03",
+  "files": [
+   {
+    "file": "Alien.d68",
+    "label": "main",
+    "load": "0080-02FF",
+    "run": "C000"
+   },
+   {
+    "file": "Alien (high score).d68",
+    "label": "high score",
+    "load": "0080-033A",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "alien.txt",
+   "alien_high_score.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0 left, 2 right, 1 fire.",
+  "description": "A shooter in which your base must stop waves of aliens; you have three bases and earn an extra one for ten or more kills. Bullets can be steered a little by moving the base. The high score version adds an end-of-game screen with the score and the best score of the series.",
+  "corrections": [
+   "021E 6401, 0224 6400, 022A 6402 restored from the article and the code (the scanned copy has an unreadable hand-written key remap over the printed digits).",
+   "High score version: issue 12 modification by Edward Perati: 00F0 F00A -> 2300, new code 0300-0337 and score store 0338-033A."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "alien",
+  "shots": [
+   "start",
+   "fire",
+   "later"
+  ]
+ },
+ {
+  "id": "tic-tac-toe-schmidt",
+  "title": "Tic-Tac-Toe",
+  "author": "R. Schmidt",
+  "issue": 3,
+  "date": "1980-11",
+  "page": 12,
+  "pdf_page": 14,
+  "archive_item": "dreamer_newsletter_03",
+  "files": [
+   {
+    "file": "Tic-Tac-Toe (Schmidt).c8",
+    "label": "main",
+    "load": "0200-0352",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "tic_tac_toe_schmidt.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Squares are keys 8 9 A / 4 5 6 / 0 1 2; F starts a new game.",
+  "description": "Two people play noughts and crosses on one DREAM; the program picks who starts and flashes the winning line. It does not stop you playing on an occupied square.",
+  "corrections": [
+   "034A 3F00 -> 3E00 (erratum in issue 4: light printing)."
+  ],
+  "doubts": [
+   "Print very faint: 0262 6B17, 0306 6A38, 029E/02FE/030A DAB8 and 0322 132C were reconstructed from the code structure."
+  ],
+  "status": "verified",
+  "test": "tic_tac_toe_schmidt",
+  "shots": [
+   "start",
+   "win",
+   "win-flash"
+  ]
+ },
+ {
+  "id": "joystick-test",
+  "title": "Joystick Test",
+  "author": "M.J. Bauer",
+  "issue": 3,
+  "date": "1980-11",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_03",
+  "files": [
+   {
+    "file": "Joystick Test.c8",
+    "label": "main",
+    "load": "0200-029B",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "joystick_test.txt"
+  ],
+  "ram": "1K",
+  "joystick": true,
+  "keys": "Needs Bauer's analog joystick; no keys.",
+  "description": "Bauer's service routine for the home-made analog joystick, followed by a small test program. A dot follows the stick on the screen while its X and Y values are printed in decimal. Other joystick games reuse the same routine.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "joystick_test",
+  "shots": [
+   "centre"
+  ]
+ },
+ {
+  "id": "ufo-invader",
+  "title": "UFO Invader",
+  "author": "P. Carson",
+  "issue": 4,
+  "date": "1980-12",
+  "page": 10,
+  "pdf_page": 10,
+  "archive_item": "dreamer_newsletter_04",
+  "files": [
+   {
+    "file": "UFO Invader.c8",
+    "label": "main",
+    "load": "0200-037F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "ufo_invader.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "C left, E right, 7 fire; any key restarts.",
+  "description": "A UFO crosses the top of the screen and drops two steps closer to your base on every pass, firing rockets at random. Shoot it with the laser; a laser and a rocket that meet cancel each other. Each hit moves its starting point closer, down to the last quarter of the screen.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "ufo_invader",
+  "shots": [
+   "start",
+   "later",
+   "score"
+  ]
+ },
+ {
+  "id": "space-battle",
+  "title": "Space Battle",
+  "author": "Arthur Hand",
+  "issue": 4,
+  "date": "1980-12",
+  "page": 12,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_04",
+  "files": [
+   {
+    "file": "Space Battle.c8",
+    "label": "main",
+    "load": "0200-03DF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "space_battle.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0 up, C down, F fire.",
+  "description": "Three fighters face a fleet of 25 enemy ships, with unlimited rockets fired one at a time from one of your two launchers. Enemy rockets leave hyperspace and can wrap from the bottom of the screen to the top. Each hit is worth 4 points and the score appears when one side is wiped out.",
+  "corrections": [],
+  "doubts": [
+   "0300 = 00B0 kept as printed (CHIPOS never calls machine code with a zero high byte, so it acts as a no-op)."
+  ],
+  "status": "verified",
+  "test": "space_battle",
+  "shots": [
+   "start",
+   "enemy-rockets",
+   "game-over-score-012"
+  ]
+ },
+ {
+  "id": "missile-attack",
+  "title": "Missile Attack",
+  "author": "P.E. Marston",
+  "issue": 4,
+  "date": "1980-12",
+  "page": 14,
+  "pdf_page": 14,
+  "archive_item": "dreamer_newsletter_04",
+  "files": [
+   {
+    "file": "Missile Attack.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "missile_attack.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1 up, 9 down, F fire.",
+  "description": "Your spacecraft is under attack from incoming missiles: dodge them, or line up with one and shoot it. A direct hit is worth 25 and the game ends after 10 shots or when you are hit. You cannot fire while moving or while your last shot is still on screen.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "missile_attack",
+  "shots": [
+   "start",
+   "later",
+   "after-hit"
+  ]
+ },
+ {
+  "id": "arrow-golf",
+  "title": "Arrow Golf",
+  "author": "Jay D. Mann",
+  "issue": 5,
+  "date": "1981-01",
+  "page": 15,
+  "pdf_page": 17,
+  "archive_item": "dreamer_newsletter_05",
+  "files": [
+   {
+    "file": "Arrow Golf.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "arrow_golf.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Aim with 4/5/6/8/A/C/D/E around 9; hold 9 to build power and release to shoot.",
+  "description": "Nine holes of golf in which an arrow replaces the club. Aim the arrow, hold 9 to store power and let go: the arrow flies a distance proportional to the beeps. Barriers bounce it back and cost an extra stroke, and the putt goes in when the arrow overlaps the square target.",
+  "corrections": [],
+  "doubts": [
+   "The author mentions a few patches but none were found in issues 5-19."
+  ],
+  "status": "verified",
+  "test": "arrow_golf",
+  "shots": [
+   "start",
+   "after2",
+   "after6"
+  ]
+ },
+ {
+  "id": "nim",
+  "title": "Nim",
+  "author": "M. K. Dowson",
+  "issue": 5,
+  "date": "1981-01",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_05",
+  "files": [
+   {
+    "file": "Nim.c8",
+    "label": "main",
+    "load": "0200-034F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "nim.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1, 2 or 3 removes that many symbols (players A and B alternate).",
+  "description": "Two players take turns removing 1, 2 or 3 of 21 symbols, and whoever takes the last one wins. Scores are kept across games and the next game starts by itself.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "nim",
+  "shots": [
+   "start",
+   "B_took_2",
+   "win_scores"
+  ]
+ },
+ {
+  "id": "lunar-lander",
+  "title": "Lunar Lander",
+  "author": "Stuart Croft",
+  "issue": 5,
+  "date": "1981-01",
+  "page": 18,
+  "pdf_page": 20,
+  "archive_item": "dreamer_newsletter_05",
+  "files": [
+   {
+    "file": "Lunar Lander.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "lunar_lander.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0-9 = fuel burned each turn.",
+  "description": "A turn-based landing: the screen shows fuel, distance and descent rate, plus a small module on the right. Each turn you enter a burn of 0-9 units to fight gravity. Touching down at a speed of 0-3 is a safe landing.",
+  "corrections": [],
+  "doubts": [
+   "A machine-code call to 05F0 (outside the program) is printed clearly; harmless in the simulation."
+  ],
+  "status": "verified",
+  "test": "lunar_lander",
+  "shots": [
+   "start",
+   "before_last",
+   "landed"
+  ]
+ },
+ {
+  "id": "kalah",
+  "title": "Kalah",
+  "author": "K. Semrad",
+  "issue": 6,
+  "date": "1981-02",
+  "page": 9,
+  "pdf_page": 11,
+  "archive_item": "dreamer_newsletter_06",
+  "files": [
+   {
+    "file": "Kalah.c8",
+    "label": "main",
+    "load": "0200-038F",
+    "run": "C000"
+   },
+   {
+    "file": "Kalah (vs computer).c8",
+    "label": "vs computer",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "kalah.txt",
+   "kalah_vs_computer.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1-6 pick the hole; in the computer version C = play the computer, B = two players.",
+  "description": "The ancient sowing game with five marbles in each small hole: pick up a hole and sow it around, and a last marble in your own big hole earns another turn. The player with more marbles in the big hole wins. A later modification, printed in issues 16-17, lets the DREAM play the white side.",
+  "corrections": [
+   "Rows 0390-03F0 left out of 'Kalah' (issue 6: workspace printed in error).",
+   "Computer version: issue 16 modification (R. Semrad) applied: 0276 A080, 0284 A086, 0288 A08D, 0290 13DE, 02A2 A07F, 02B2 A07F, 02BA A07F, 0318 A080, 0322 A0FC, 0356 1386, 036E A07F, plus new code 0380-03FF.",
+   "Computer version: 038B A085 -> A086 (erratum in issue 17)."
+  ],
+  "doubts": [
+   "The issue 17 erratum '03CA = E0' gives E080, an unknown opcode; 03CB may have been meant."
+  ],
+  "status": "verified",
+  "test": "kalah",
+  "shots": [
+   "start",
+   "after_A3",
+   "after_B5"
+  ]
+ },
+ {
+  "id": "simple-rubout",
+  "title": "Simple Rubout",
+  "author": "Bruce Mitchell",
+  "issue": 6,
+  "date": "1981-02",
+  "page": 10,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_06",
+  "files": [
+   {
+    "file": "Simple Rubout.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "simple_rubout.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Two hex digits: width, then height of the rectangle.",
+  "description": "Two players take turns erasing rectangles of dots, whose top left corner is the flashing cursor. Overlapping a gap earns a low beep and gives the opponent two turns. Whoever erases the last dot wins.",
+  "corrections": [
+   "0202 23CA -> A0FA (issue 6 instruction for first-time users: removes the 16 random holes).",
+   "037E 1540 -> 1550 (hand-corrected on the scan; the right checkerboard of the end screen was missing a dot, matches 038E and 039E)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "simple_rubout",
+  "shots": [
+   "start",
+   "after_3x2",
+   "turn_done"
+  ]
+ },
+ {
+  "id": "parachute-mission",
+  "title": "Parachute Mission",
+  "author": "F. Lever (Jnr)",
+  "issue": 6,
+  "date": "1981-02",
+  "page": 11,
+  "pdf_page": 13,
+  "archive_item": "dreamer_newsletter_06",
+  "files": [
+   {
+    "file": "Parachute Mission.c8",
+    "label": "main",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "parachute_mission.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "F jump, C steer left, D steer right.",
+  "description": "Jump from the platform and float to the ground while dodging a randomly moving mine and two patches of quicksand. Losing needs a key to restart; winning restarts by itself.",
+  "corrections": [],
+  "doubts": [
+   "Hand marks on 0216-021E, 022C, 023A, 0374 and 0386 carry no new values; printed values kept."
+  ],
+  "status": "verified",
+  "test": "parachute_mission",
+  "shots": [
+   "platform",
+   "steered_right",
+   "win_text"
+  ]
+ },
+ {
+  "id": "depth-charge",
+  "title": "Depth Charge",
+  "author": "P. E. Marston",
+  "issue": 7,
+  "date": "1981-03",
+  "page": 10,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_07",
+  "files": [
+   {
+    "file": "Depth Charge.c8",
+    "label": "main",
+    "load": "0200-037F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "depth_charge.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Three hex digits per guess: X, Y, depth.",
+  "description": "Find a hidden submarine in a 16x16x16 grid with only four depth charges. After each guess a sonar report tells you the direction of the error in compass and depth terms (for example south, east and too high). Miss four times and the sub is revealed and torpedoes you.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "depth_charge",
+  "shots": [
+   "start",
+   "report_1",
+   "hit_tries_2"
+  ]
+ },
+ {
+  "id": "blackjack",
+  "title": "Blackjack",
+  "author": "G.J. Bidgood",
+  "issue": 7,
+  "date": "1981-03",
+  "page": 11,
+  "pdf_page": 13,
+  "archive_item": "dreamer_newsletter_07",
+  "files": [
+   {
+    "file": "Blackjack.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "blackjack.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Bet digits 0-9 then A to accept, C to change; an ace asks 1 = value 1, other = 11; 0 = stand, other = hit; F = new game.",
+  "description": "Twenty-one against the DREAM, which plays on the left while your cards are on the right. You start with $200 and type your bet at the flashing dollar sign; the bet is refused if it would take your credit past $500 or below zero. A white square dealt to you is an ace.",
+  "corrections": [],
+  "doubts": [
+   "03B1-03B2 read as 00BC (the only base that hits the card font at 00C0).",
+   "0100-01FF not printed (zeros).",
+   "Hand-written changes on the scan (02B4 3F00 -> 3F0F, 02E8, 02F8, keys 0 -> F) not applied."
+  ],
+  "status": "verified",
+  "test": "blackjack",
+  "shots": [
+   "ace_question",
+   "hit",
+   "next_hand"
+  ]
+ },
+ {
+  "id": "super-sub",
+  "title": "Super Sub",
+  "author": "Campbell Fethers",
+  "issue": 7,
+  "date": "1981-03",
+  "page": 13,
+  "pdf_page": 15,
+  "archive_item": "dreamer_newsletter_07",
+  "files": [
+   {
+    "file": "Super Sub.c8",
+    "label": "main",
+    "load": "0200-04FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "super_sub.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "4/5/6 surface, 8/A left/right, C/D/E dive, 0/1/2 fire (two torpedoes at a time); F restarts.",
+  "description": "A bigger version of Sub with machine-code routines for speed and sound, where two torpedoes can be in flight and enemy ships drop depth charges, even a near miss can sink you. Each ship you sink adds one to your score, which is shown when the sub goes down.",
+  "corrections": [
+   "02D9 87 -> B7 (87 is not a valid 6800 opcode; the noise routine reads and writes $8012; typewriter font confuses 8 and B)."
+  ],
+  "doubts": [
+   "03E5 INC $0015 should perhaps be $0014, but the carry is never reached.",
+   "02CA uses code bytes as sprite rows; left as printed."
+  ],
+  "status": "verified",
+  "test": "super_sub",
+  "shots": [
+   "a",
+   "hit",
+   "later"
+  ]
+ },
+ {
+  "id": "simple-simon",
+  "title": "Simple Simon",
+  "author": "I.J. Campbell",
+  "issue": 8,
+  "date": "1981-04",
+  "page": 18,
+  "pdf_page": 20,
+  "archive_item": "dreamer_newsletter_08",
+  "files": [
+   {
+    "file": "Simple Simon.c8",
+    "label": "main",
+    "load": "0200-038F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "simple_simon.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0-F: repeat the flashed digits.",
+  "description": "A memory game: one more hex digit flashes on each round, up to eight, and you must repeat them in order on the keypad. Eight correct gives YOU WIN, a wrong key gives I WIN, and the game restarts when you press a key.",
+  "corrections": [],
+  "doubts": [
+   "Rows 0260-038F are very faint on the scan: 0310-0334 (final message), 0364, 0366, 0370, 0380 and 038E were reconstructed."
+  ],
+  "status": "verified",
+  "test": "simple_simon",
+  "shots": [
+   "typed-3",
+   "typed-8",
+   "lose"
+  ]
+ },
+ {
+  "id": "tortoise",
+  "title": "Tortoise",
+  "author": "P.E. Marston",
+  "issue": 8,
+  "date": "1981-04",
+  "page": 19,
+  "pdf_page": 21,
+  "archive_item": "dreamer_newsletter_08",
+  "files": [
+   {
+    "file": "Tortoise.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "tortoise.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Any key starts; 8 left, A right, 5 up, D down.",
+  "description": "Drive a car round a track: five laps or five crashes end the game. A crash stops the car until you back out. At the end a skill message is shown and the game restarts on a key.",
+  "corrections": [],
+  "doubts": [
+   "Hard mode (0271 = 05, 032D = FF) not tested; hand-written key changes on the scan ignored."
+  ],
+  "status": "verified",
+  "test": "tortoise",
+  "shots": [
+   "track",
+   "lap1",
+   "game_over"
+  ]
+ },
+ {
+  "id": "rescue-mission",
+  "title": "Rescue Mission",
+  "author": null,
+  "issue": 8,
+  "date": "1981-04",
+  "page": 20,
+  "pdf_page": 22,
+  "archive_item": "dreamer_newsletter_08",
+  "files": [
+   {
+    "file": "Rescue Mission.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "rescue_mission.txt"
+  ],
+  "ram": "1K",
+  "joystick": true,
+  "keys": "Bauer's joystick steers the lander; F releases the module from the mother ship and launches it after landing.",
+  "description": "Fly a rescue module from the mother ship down to cells on a planet and back, using the analog joystick. Horizontal stick position sets direction and the vertical position controls descent speed; fuel is spent only with the stick at an extreme. Asteroids drift through the scene.",
+  "corrections": [
+   "00F0 A2C8 -> A2CB (the dot-matrix print looks like 8; with C8 every take-off crashed because the cell sprite XORed away by the landing scan is F8 A8 F8 at 02CB)."
+  ],
+  "doubts": [
+   "Later layers and the bonus ship were not tested."
+  ],
+  "status": "verified",
+  "test": "rescue_mission",
+  "shots": [
+   "start",
+   "released",
+   "right"
+  ]
+ },
+ {
+  "id": "ping-pong",
+  "title": "Ping-Pong",
+  "author": "Martin Head",
+  "issue": 8,
+  "date": "1981-04",
+  "page": 21,
+  "pdf_page": 23,
+  "archive_item": "dreamer_newsletter_08",
+  "files": [
+   {
+    "file": "Ping-Pong.c8",
+    "label": "main",
+    "load": "0200-036F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "ping_pong.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "9 bat up, 1 bat down; any key serves.",
+  "description": "Pong against the computer, played to 21 points. Difficulty can be changed through one byte in the program.",
+  "corrections": [
+   "0250 72EE -> 7201 and 025C 7201 -> 72FF (printed values moved the bat the wrong way and contradict the text; the scan has hand marks on exactly these words; not a published erratum)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "ping_pong",
+  "shots": [
+   "start",
+   "t2",
+   "returned   "
+  ]
+ },
+ {
+  "id": "eight-direction-joystick-test",
+  "title": "Eight Direction Joystick Test",
+  "author": "Graeme V. Samways",
+  "issue": 9,
+  "date": "1981-05",
+  "page": 13,
+  "pdf_page": 15,
+  "archive_item": "dreamer_newsletter_09",
+  "files": [
+   {
+    "file": "Eight Direction Joystick Test.c8",
+    "label": "main",
+    "load": "0200-0275",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "eight_direction_joystick_test.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Paddle (or keys) 5 up, D down, 8 left, A right, two adjacent keys = diagonal, F = fire.",
+  "description": "A test program for the eight-direction paddle wired across keys 5/8/A/D. It shows the direction value (9 in the centre) at the top left, and an F when fire is held. The routine at 0230 is reused by the eight-direction version of Sub.",
+  "corrections": [],
+  "doubts": [
+   "Tested only with single keys (5, D, 8, A, 9F)."
+  ],
+  "status": "verified",
+  "test": "eight_direction_joystick_test",
+  "shots": [
+   "key5_up",
+   "key8_left",
+   "keyA_right"
+  ]
+ },
+ {
+  "id": "race-meeting",
+  "title": "Race Meeting",
+  "author": "B.N. Hussey",
+  "issue": 9,
+  "date": "1981-05",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_09",
+  "files": [
+   {
+    "file": "Race Meeting.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "race_meeting.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Any key starts a race.",
+  "description": "Three horses run with random speeds and you simply watch the race. There is a 10% chance that a horse is not detected at the winning post and runs a second lap.",
+  "corrections": [
+   "0302 6C08 -> 6C0B (the title overlaps the digit on the scan)."
+  ],
+  "doubts": [
+   "035E read as C203 (last digit faint; with C202 horse 1 would never advance).",
+   "The 10% second lap was not tested."
+  ],
+  "status": "verified",
+  "test": "race_meeting",
+  "shots": [
+   "intro1",
+   "race",
+   "finish"
+  ]
+ },
+ {
+  "id": "hangman-smith",
+  "title": "Hangman (Smith)",
+  "author": "Graeme Smith",
+  "issue": 9,
+  "date": "1981-05",
+  "page": 19,
+  "pdf_page": 21,
+  "archive_item": "dreamer_newsletter_09",
+  "files": [
+   {
+    "file": "Hangman (Smith).d68",
+    "label": "main",
+    "load": "0080-03C3",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "hangman_smith.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Letters as two hex keys (A-F = 0A-0F, G = 10 ... Z = 23); E erases, F ends the word.",
+  "description": "A two-player hangman: the first player types a word of up to ten letters, then the second guesses letters. Every miss adds a part to the gallows, and if the man is hanged a long buzz sounds. Letters are entered as two keypad digits in the 'T.V. Typewriter' code.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "hangman_smith",
+  "shots": [
+   "word_typed",
+   "wrong_8",
+   "solved"
+  ]
+ },
+ {
+  "id": "space-invaders",
+  "title": "Space Invaders",
+  "author": "Fred Lever (Jnr)",
+  "issue": 9,
+  "date": "1981-05",
+  "page": 20,
+  "pdf_page": 22,
+  "archive_item": "dreamer_newsletter_09",
+  "files": [
+   {
+    "file": "Space Invaders.c8",
+    "label": "main",
+    "load": "0200-05FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "space_invaders.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "1 starts, C left, E right, F fire.",
+  "description": "A version of the arcade classic with an animated intro in which the title is misspelt and then fixed by an invader. Hit by four bombs, or let the invaders reach the right edge, and you lose; a DANGER warning shows when they get close. Winning earns a free game.",
+  "corrections": [],
+  "doubts": [
+   "The article says right = D but the listing (0386 = 660E) reads key E; the listing was kept."
+  ],
+  "status": "playable",
+  "test": "space_invaders",
+  "shots": [
+   "intro",
+   "right_E",
+   "later"
+  ]
+ },
+ {
+  "id": "astro-fighter",
+  "title": "Astro-Fighter",
+  "author": "M. Spieth",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 18,
+  "pdf_page": 20,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Astro-Fighter.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "astro_fighter.txt"
+  ],
+  "ram": "1K",
+  "joystick": true,
+  "keys": "F starts and fires; fly with Bauer's joystick.",
+  "description": "Fly with the joystick to bring an enemy fighter into the centre of the screen and fire four photon torpedoes at it with F, while space junk drifts past. The game lasts two minutes and the number of hits is shown at the end. The screen stays blank until F is pressed.",
+  "corrections": [
+   "0254 1265 -> 1266 (1265 jumps into the middle of an instruction; the article's hint says 0254 holds 1266)."
+  ],
+  "doubts": [
+   "It reads the joystick with its own routine at 036F, not Bauer's interrupt routine."
+  ],
+  "status": "verified",
+  "test": "astro_fighter",
+  "shots": [
+   "playing",
+   "torpedoes",
+   "game_over_score"
+  ]
+ },
+ {
+  "id": "gold-fever",
+  "title": "Gold Fever",
+  "author": "Bruce Mitchell",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 19,
+  "pdf_page": 21,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Gold Fever.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "gold_fever.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Digits 1-9: horizontal coordinate, then vertical coordinate.",
+  "description": "An educational game for young children that teaches compass directions and coordinates. A 9x9 grid is drawn with a lode of gold hidden on it. You enter coordinates and follow the directions shown, taking care to avoid old mine shafts.",
+  "corrections": [],
+  "doubts": [
+   "Routine 00CD-00FA is never called; left as printed."
+  ],
+  "status": "verified",
+  "test": "gold_fever",
+  "shots": [
+   "grid",
+   "gold",
+   "mine_shaft"
+  ]
+ },
+ {
+  "id": "iago-for-two",
+  "title": "Iago for Two",
+  "author": "M. Collins",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 20,
+  "pdf_page": 22,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Iago for Two.c8",
+    "label": "main",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "iago_for_two.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0-7 for X then Y, F confirms, C passes the turn, other keys cancel.",
+  "description": "Reversi (Othello) for two players, with a random starting player. A cursor shows the chosen square and illegal moves are refused. Use C when you have no legal move.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "iago_for_two",
+  "shots": [
+   "start",
+   "moved"
+  ]
+ },
+ {
+  "id": "dice-game",
+  "title": "Dice Game",
+  "author": "K. Semrad",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 21,
+  "pdf_page": 23,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Dice Game.d68",
+    "label": "main",
+    "load": "00A0-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "dice_game.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Bet 1-9 or A (=10); A = over 7, B = under 7; 0 clears the table; C after the end.",
+  "description": "Place a bet of 1 to 10 units and call whether two dice will total over or under seven. The bank wins whenever a seven is thrown. The game ends when you go broke or break the bank.",
+  "corrections": [],
+  "doubts": [
+   "03F6 too faint, read as 9631.",
+   "0080-009F not printed.",
+   "02D0 = 6123 with a smudge.",
+   "0366 = 9C04 is in code that is never reached."
+  ],
+  "status": "verified",
+  "test": "dice_game",
+  "shots": [
+   "rolled",
+   "bankrupt_screen",
+   "broke_bank_screen"
+  ]
+ },
+ {
+  "id": "iago-for-one",
+  "title": "Iago for One",
+  "author": "M. Collins",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 21,
+  "pdf_page": 23,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Iago for One.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "iago_for_one.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "As Iago for Two: 0-7 for X then Y, F confirms, C changes turn.",
+  "description": "An add-on that lets one player compete against the DREAM at Reversi. The machine is slow, thinking for about 25 seconds, but it plays a tricky game. Its chosen move must be confirmed with F.",
+  "corrections": [
+   "Issue 10 changes applied over the Iago for Two listing: 0210 2080, 02B8 A0FD, 02BC A0FE, 03CC CE00, 03CE 5FDF, 03D0 2439 (03CC resets the CHIP-8 stack; the score BCD moves to 00FD)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "iago_for_one",
+  "shots": [
+   "start",
+   "dream_choice",
+   "dream_moved"
+  ]
+ },
+ {
+  "id": "motor-bike-game",
+  "title": "Motor Bike Game",
+  "author": "C. Fethers",
+  "issue": 10,
+  "date": "1981-06",
+  "page": 23,
+  "pdf_page": 25,
+  "archive_item": "dreamer_newsletter_10",
+  "files": [
+   {
+    "file": "Motor Bike Game.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "motor_bike_game.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "D accelerate, E brake, F foot.",
+  "description": "Ride a motorbike with the speed, distance and time shown at the top. Change gears by lifting off the accelerator, and avoid pulling a wheelie by accelerating too hard. Jump or brake for obstacles; the trip ends after 120 miles.",
+  "corrections": [],
+  "doubts": [
+   "Jumping an obstacle was not tested."
+  ],
+  "status": "playable",
+  "test": "motor_bike_game",
+  "shots": [
+   "w1",
+   "w7",
+   "w8"
+  ]
+ },
+ {
+  "id": "zoonayman",
+  "title": "Zoonayman",
+  "author": "Lindsay B. Ford",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 8,
+  "pdf_page": 10,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Zoonayman.d68",
+    "label": "main",
+    "load": "0080-03F9",
+    "run": "C000"
+   },
+   {
+    "file": "Zoonayman (Two Player).d68",
+    "label": "two player",
+    "load": "0080-04F6",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "zoonayman.txt",
+   "zoonayman_two_player.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "FROM 1-6, TO 1-6, AT 1-5; any key except F ends the viewing time; two player: 1 = one player, 2 = second player enters the change.",
+  "description": "A pattern-recognition game: the DREAM throws 50 dice and secretly changes some by a non-random rule. After a viewing time you say which value changed, to what, and where on the screen. Score goes up one for a right answer and down one for a wrong one, with a win at 20 and a loss at 0; a two-player add-on lets a friend set the change instead.",
+  "corrections": [
+   "Two player version: 0206 = 13FA hook plus the add-on rows 03FA-04F6."
+  ],
+  "doubts": [
+   "0306 = EF9F is printed clearly and is flagged by the checker, but CHIPOS accepts it; kept.",
+   "03F4 read as 12C6."
+  ],
+  "status": "verified",
+  "test": "zoonayman",
+  "shots": [
+   "title-picture",
+   "after-from-right",
+   "win"
+  ]
+ },
+ {
+  "id": "compucrosses",
+  "title": "Compucrosses",
+  "author": "K. Bolch",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 14,
+  "pdf_page": 16,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Compucrosses.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "compucrosses.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1-9 pick the cell (you are O).",
+  "description": "Noughts and crosses against the DREAM, with the cells numbered 1 to 9. Three scores are shown at the top. A key pressed while the computer is thinking is lost.",
+  "corrections": [
+   "No code change: the article says left = computer, middle = draws, but the issue 15 erratum (D. Chaves) says left = you, middle = computer, right = draws; the simulation confirms the erratum."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "compucrosses",
+  "shots": [
+   "start",
+   "g2-after-4",
+   "g3-after-8"
+  ]
+ },
+ {
+  "id": "castle-invaders",
+  "title": "Castle Invaders",
+  "author": "D.A. Trabucco",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Castle Invaders.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "castle_invaders.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "8 left, A right, 9 fire.",
+  "description": "Space Invaders in a castle setting: man the cannon and shoot invaders (5 points) and commanders (15 points) with 30 bombs. The game ends when the bombs run out, the invaders reach the castle or your cannon is hit. The score is shown at the end and any key restarts.",
+  "corrections": [],
+  "doubts": [
+   "0080-00DF is partly not printed and 0110-01FF not printed (zeros).",
+   "00E4 = 391E has a hand mark; kept.",
+   "Hand-written key remaps (0259, 0263, 0273) ignored.",
+   "A natural game over was not reproduced."
+  ],
+  "status": "verified",
+  "test": "castle_invaders",
+  "shots": [
+   "hit",
+   "cannon-left",
+   "game-over"
+  ]
+ },
+ {
+  "id": "knot-so-easy",
+  "title": "Knot-So-Easy",
+  "author": "R. Cameron",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 19,
+  "pdf_page": 21,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Knot-So-Easy.d68",
+    "label": "main",
+    "load": "0080-03D5",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "knot_so_easy.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Co-ordinates x 1-4 then y 1-4 swap a square with its right neighbour, 5 rotates, 6 checks.",
+  "description": "A picture puzzle: a rope drawn as dots in a 4x4 block of squares is jumbled and rotated by the computer. You swap and rotate squares to rebuild it, then press 6 to check. The picture flashes off if wrong and a tone sounds if correct.",
+  "corrections": [
+   "03B9 06 -> C6 (faint C6; with 06 the check crashed)."
+  ],
+  "doubts": [
+   "0394 BEQ lands on 03B7 and writes 00 into display byte 0139; harmless.",
+   "0285 02A8 has an ink blot on the A; read as printed."
+  ],
+  "status": "verified",
+  "test": "knot_so_easy",
+  "shots": [
+   "rope",
+   "swap-1-1",
+   "check-right"
+  ]
+ },
+ {
+  "id": "duck-shoot",
+  "title": "Duck Shoot",
+  "author": "C. Fethers",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 21,
+  "pdf_page": 23,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Duck Shoot.c8",
+    "label": "main",
+    "load": "0200-03EB",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "duck_shoot.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "8 left, A right, 5 up, 1 down, F fire.",
+  "description": "A duck bounces around the screen while you move a gun sight and fire; you have 20 rounds. After each shot the rounds left are shown, and a hit duck dies. At the end the total bag is displayed.",
+  "corrections": [],
+  "doubts": [
+   "Hand-written key and sprite changes on the scan ignored."
+  ],
+  "status": "verified",
+  "test": "duck_shoot",
+  "shots": [
+   "start",
+   "duck-flees",
+   "bag"
+  ]
+ },
+ {
+  "id": "slide",
+  "title": "Slide",
+  "author": null,
+  "issue": 11,
+  "date": "1981-07",
+  "page": 22,
+  "pdf_page": 24,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Slide.c8",
+    "label": "main",
+    "load": "0200-0383",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "slide.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold 0 to stop the puck, release to launch.",
+  "description": "Two players slide three pucks each at spots worth 2, 4 and 8 points. The puck bobs up and down at the left; holding 0 freezes it and the longer you hold, the further it slides after release. The highest possible score is 216.",
+  "corrections": [
+   "0382 = 00EE (issue 16 erratum: the last byte was left off the listing; already hand-written on the scan)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "slide",
+  "shots": [
+   "start",
+   "puck1-end",
+   "puck2-end"
+  ]
+ },
+ {
+  "id": "tic-tac-toe-vig",
+  "title": "Tic-Tac-Toe",
+  "author": "F. Vig",
+  "issue": 11,
+  "date": "1981-07",
+  "page": 23,
+  "pdf_page": 25,
+  "archive_item": "dreamer_newsletter_11",
+  "files": [
+   {
+    "file": "Tic-Tac-Toe (Vig).c8",
+    "label": "main",
+    "load": "0200-03DB",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "tic_tac_toe_vig.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Squares 8 9 A / 4 5 6 / 0 1 2; F = the computer moves first.",
+  "description": "Noughts and crosses against the DREAM, which picks a random open square unless forced to play elsewhere. The player moves first as X unless F is pressed. The result shows as W, L or D, and a wrong key shows a question mark.",
+  "corrections": [],
+  "doubts": [
+   "Key F and the draw screen were not tested.",
+   "After W/L/D the program stops in a jump to itself at 0356."
+  ],
+  "status": "verified",
+  "test": "tic_tac_toe_vig",
+  "shots": [
+   "start",
+   "after-8",
+   "after-A"
+  ]
+ },
+ {
+  "id": "hangman-ford",
+  "title": "Hangman (Ford)",
+  "author": "Lindsay R. Ford",
+  "issue": 12,
+  "date": "1981-08",
+  "page": 9,
+  "pdf_page": 11,
+  "archive_item": "dreamer_newsletter_12",
+  "files": [
+   {
+    "file": "Hangman (Ford).d68",
+    "label": "main",
+    "load": "0080-0421",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "hangman_ford.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "5-8 = word length, then each letter as two keys (A = 0A ... Z = 23).",
+  "description": "A two-player hangman: the setter chooses a word length of 5 to 8 and keys in the letters, then the guesser tries letters. Each miss builds the hanged man and as many misses as letters hangs him; a correct guess wins a reprieve.",
+  "corrections": [],
+  "doubts": [
+   "1K and ASCII keyboard variants in the article are not applied.",
+   "0100-01FF filled with zeros."
+  ],
+  "status": "verified",
+  "test": "hangman_ford",
+  "shots": [
+   "how-many-letters",
+   "guess-L",
+   "won"
+  ]
+ },
+ {
+  "id": "dodgit",
+  "title": "Dodgit",
+  "author": "Fred Lever (Jnr)",
+  "issue": 12,
+  "date": "1981-08",
+  "page": 12,
+  "pdf_page": 14,
+  "archive_item": "dreamer_newsletter_12",
+  "files": [
+   {
+    "file": "Dodgit.c8",
+    "label": "main",
+    "load": "0200-037D",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "dodgit.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "6 = step right; F returns to CHIPOS.",
+  "description": "A person at the left of the screen must cross four lanes of random cars and trucks. The only control is a step to the right and there is no way back. Ten hits means you lose; reaching the right edge wins.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "dodgit",
+  "shots": [
+   "start",
+   "lose",
+   "win"
+  ]
+ },
+ {
+  "id": "time-trial",
+  "title": "Time Trial",
+  "author": "D. Robertson",
+  "issue": 12,
+  "date": "1981-08",
+  "page": 13,
+  "pdf_page": 15,
+  "archive_item": "dreamer_newsletter_12",
+  "files": [
+   {
+    "file": "Time Trial.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "time_trial.txt"
+  ],
+  "ram": "1K",
+  "joystick": true,
+  "keys": "1-7 = top speed (1 fastest), then steer with Bauer's joystick.",
+  "description": "Race round a track with the joystick, completing as many laps as you can before a timer bar creeps across the top of the screen. Hitting the sides restarts from the lowest speed. Lap count is shown bottom left.",
+  "corrections": [
+   "00C6 600E -> 600B (read on the enlarged scan)."
+  ],
+  "doubts": [
+   "Bauer's routine is used with the Y value not halved, as published."
+  ],
+  "status": "verified",
+  "test": "time_trial",
+  "shots": [
+   "track",
+   "upleft",
+   "crash"
+  ]
+ },
+ {
+  "id": "four-wheel-poker-machine",
+  "title": "Fully Automatic Four Wheel Poker Machine",
+  "author": "J. Panos",
+  "issue": 12,
+  "date": "1981-08",
+  "page": 14,
+  "pdf_page": 16,
+  "archive_item": "dreamer_newsletter_12",
+  "files": [
+   {
+    "file": "Fully Automatic Four Wheel Poker Machine.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "four_wheel_poker.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Key a three-digit bank, F spins, C resets.",
+  "description": "A four-reel poker machine with a pay table of pairs and runs of 9, 10, J, Q, K, A and 7, where four aces or four sevens are the jackpot. Set a bank by keying three digits, then each spin costs one and the reels stop one by one.",
+  "corrections": [
+   "0332 30C6 -> 10C6 and 03EE 39C0 -> 39E0 (amendments published in issue 13)."
+  ],
+  "doubts": [
+   "With 39E0 the jackpot does not pay (four aces or sevens add F0); 39F0 was probably meant. The published value was kept."
+  ],
+  "status": "verified",
+  "test": "four_wheel_poker",
+  "shots": [
+   "start",
+   "spin2",
+   "spin4"
+  ]
+ },
+ {
+  "id": "the-black-hole",
+  "title": "The Black Hole",
+  "author": "Graeme V. Samways",
+  "issue": 12,
+  "date": "1981-08",
+  "page": 15,
+  "pdf_page": 17,
+  "archive_item": "dreamer_newsletter_12",
+  "files": [
+   {
+    "file": "The Black Hole.c8",
+    "label": "main",
+    "load": "0200-0313",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "the_black_hole.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1-9 shoot that location.",
+  "description": "A 3x3 universe in which each location is either a black hole or a star. Shooting a star turns it into a black hole and complements the other states in its galaxy. Aim for a central black hole surrounded by eight stars in as few turns as possible; all black holes loses with a score of 99.",
+  "corrections": [],
+  "doubts": [
+   "0306 = 20C0 instead of 2000 is harmless; 0312 = 00D4 is unused."
+  ],
+  "status": "verified",
+  "test": "the_black_hole",
+  "shots": [
+   "start",
+   "after-8-turns",
+   "all-black-holes-score-99"
+  ]
+ },
+ {
+  "id": "a-maze-ing",
+  "title": "A-Maze-ing",
+  "author": "Graeme V. Samways",
+  "issue": 13,
+  "date": "1981-09",
+  "page": 9,
+  "pdf_page": 11,
+  "archive_item": "dreamer_newsletter_13",
+  "files": [
+   {
+    "file": "A-Maze-ing.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "a_maze_ing.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "4/5/6/8/A/C/D/E move the cursor, 2 sets a wall, 0 drops food, 1 frees the mouse, 3 stops, B/F afterwards.",
+  "description": "Draw a maze with the cursor, drop some food, then release a mouse at the entrance and watch it search for the food. Hold 3 to interrupt the search. When it finds the food, B repeats the same maze and F wipes the screen. The 'dead-end' data lives in 0400-05FF, so 2K are needed.",
+  "corrections": [],
+  "doubts": [
+   "Key digits in 024A-0278 are overwritten by hand on the scan; the article's key table was used.",
+   "0294 = 76C2, perhaps 8AC2; kept.",
+   "03FE faint, read 13E2.",
+   "Tested with the RAM size set to 1."
+  ],
+  "status": "verified",
+  "test": "a_maze_ing",
+  "shots": [
+   "start",
+   "found",
+   "again"
+  ]
+ },
+ {
+  "id": "starship-encounter",
+  "title": "Starship Encounter",
+  "author": "Edward Perati",
+  "issue": 13,
+  "date": "1981-09",
+  "page": 13,
+  "pdf_page": 15,
+  "archive_item": "dreamer_newsletter_13",
+  "files": [
+   {
+    "file": "Starship Encounter.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "starship_encounter.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "E starts and switches on the force field, 8/A/5/D move the fighter, F fires the laser.",
+  "description": "Your fighter orbits a central starship while an enemy wanders randomly. Shoot the enemy with the horizontal laser, or fire the starship's force field to destroy anything near it. You start with 10 fighters and 20 hits earn a new game.",
+  "corrections": [],
+  "doubts": [
+   "Key digits at 0202 and 0248-024E are overwritten by hand; the article's keys were used.",
+   "Row 00C0 is faint, read 0808."
+  ],
+  "status": "verified",
+  "test": "starship_encounter",
+  "shots": [
+   "start",
+   "laser",
+   "crash"
+  ]
+ },
+ {
+  "id": "strip-jack-naked",
+  "title": "Strip Jack Naked",
+  "author": "Lindsay R. Ford",
+  "issue": 13,
+  "date": "1981-09",
+  "page": 15,
+  "pdf_page": 17,
+  "archive_item": "dreamer_newsletter_13",
+  "files": [
+   {
+    "file": "Strip Jack Naked.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   },
+   {
+    "file": "Strip Jack Naked (graphics).d68",
+    "label": "graphics sequence",
+    "load": "0080-05A1",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "strip_jack_naked.txt",
+   "strip_jack_naked_graphics.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "Any key deals your card.",
+  "description": "A card game against the DREAM with 27 cards each and a coin toss for the first deal. After a royal card the other player has a fixed number of cards to reply with another royal or lose a point. The graphics version, needing 2K, shows a picture sequence between rounds according to the points left.",
+  "corrections": [
+   "020C and 03FC = 0000 (printed 2400/2404; erratum in issue 14: those values are valid only with the graphics add-on). The graphics version keeps 2400/2404."
+  ],
+  "doubts": [
+   "00AC E00E has a scribble and 02F4 6E32 has '30' in pencil; printed values kept.",
+   "The final picture was not tested."
+  ],
+  "status": "verified",
+  "test": "strip_jack_naked",
+  "shots": [
+   "start",
+   "deal1",
+   "deal2"
+  ]
+ },
+ {
+  "id": "crash",
+  "title": "Crash",
+  "author": "Tony Horncastle",
+  "issue": 13,
+  "date": "1981-09",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_13",
+  "files": [
+   {
+    "file": "Crash.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "crash.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "A or B picks the car the DREAM drives; 0 (you are A) or 3 (you are B) changes lane.",
+  "description": "Two cars race round a four-lane track in opposite directions. Car A scores for crashing into B, while B scores for each quarter lap. You drive one car while the DREAM drives the other, changing lanes at random, and the first to 250 points wins.",
+  "corrections": [],
+  "doubts": [
+   "03A6 = 13B2, 031E = 81C0 and 0202 = 233C were re-read from the scan.",
+   "Collisions and the end at 250 were not tested."
+  ],
+  "status": "verified",
+  "test": "crash",
+  "shots": [
+   "racing"
+  ]
+ },
+ {
+  "id": "noughts-and-crosses",
+  "title": "Noughts and Crosses",
+  "author": "M.K. Dowson",
+  "issue": 14,
+  "date": "1981-10",
+  "page": 13,
+  "pdf_page": 15,
+  "archive_item": "dreamer_newsletter_14",
+  "files": [
+   {
+    "file": "Noughts and Crosses.d68",
+    "label": "main",
+    "load": "0090-03F5",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "noughts_and_crosses.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Squares are 0 1 2 / 4 5 6 / 8 9 A.",
+  "description": "Noughts and crosses for two players, O and X. Games restart on their own with the cumulative scores kept, and the loser or the winner alternates who goes first.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "noughts_and_crosses",
+  "shots": [
+   "start",
+   "win",
+   "next"
+  ]
+ },
+ {
+  "id": "multi-pile-nim",
+  "title": "Multi-Pile Nim",
+  "author": "J. Fisher",
+  "issue": 14,
+  "date": "1981-10",
+  "page": 14,
+  "pdf_page": 16,
+  "archive_item": "dreamer_newsletter_14",
+  "files": [
+   {
+    "file": "Multi-Pile Nim.d68",
+    "label": "main",
+    "load": "0090-03F1",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "multi_pile_nim.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Number of piles (0-F), then each size; then pile and amount to take; F after the end returns to the monitor.",
+  "description": "Nim against the computer with up to 15 piles of up to 15 objects, where you take any number from one pile per turn. The computer always moves first and the board is shown after its move, with white bands marking empty piles.",
+  "corrections": [
+   "036E re-read from the scan as 137C."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "multi_pile_nim",
+  "shots": [
+   "piles",
+   "board",
+   "after"
+  ]
+ },
+ {
+  "id": "big-square-puzzle",
+  "title": "Big Square Puzzle",
+  "author": "Tony Horncastle",
+  "issue": 14,
+  "date": "1981-10",
+  "page": 15,
+  "pdf_page": 17,
+  "archive_item": "dreamer_newsletter_14",
+  "files": [
+   {
+    "file": "Big Square Puzzle.c8",
+    "label": "main",
+    "load": "0200-03F1",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "big_square_puzzle.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Block number, then 5 up, 8 left, A right, D down.",
+  "description": "A sliding-block puzzle: move the big square out through the gate on the right in as few moves as possible. You key the block number and then a direction, and invalid moves are refused. A move counter sits at the bottom right.",
+  "corrections": [],
+  "doubts": [
+   "The article says '5 = down' but the code moves the block up.",
+   "0362 3A08 13C4 kept as printed: any key other than 5/8/A also moves the block down."
+  ],
+  "status": "verified",
+  "test": "big_square_puzzle",
+  "shots": [
+   "start",
+   "moved"
+  ]
+ },
+ {
+  "id": "asteroid-belt",
+  "title": "Asteroid Belt",
+  "author": "J. Fisher",
+  "issue": 14,
+  "date": "1981-10",
+  "page": 16,
+  "pdf_page": 18,
+  "archive_item": "dreamer_newsletter_14",
+  "files": [
+   {
+    "file": "Asteroid Belt.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "asteroid_belt.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Speed 0 (fast) to F (slow), then 5 up, 8 left, A right, D down.",
+  "description": "Steer a 2x2 square from the top left corner to the bottom right corner through an asteroid field with as few crashes as possible. The game never stops by itself and the crash count is shown at the end, where any key but F restarts.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "asteroid_belt",
+  "shots": [
+   "start",
+   "crashed",
+   "end"
+  ]
+ },
+ {
+  "id": "touch-down",
+  "title": "Touch Down",
+  "author": "D. Toon",
+  "issue": 14,
+  "date": "1981-10",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_14",
+  "files": [
+   {
+    "file": "Touch Down.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "touch_down.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "5 up, 8 left, A right, D down (first move sideways); 3 gives up.",
+  "description": "Fly a powerless fighter back to the mother ship using only retro rockets. The navigation computer stops you whenever you release the thrust key and will not let you repeat or reverse the last move. Messages in bitmap text tell you how you did.",
+  "corrections": [],
+  "doubts": [
+   "Hand-written 9/4/6/1 keys on the scan ignored.",
+   "Arrival at the mother ship was forced with a poke in the test.",
+   "0324 printed '1?54'; 1954 is the only value that draws the F of FOOT."
+  ],
+  "status": "verified",
+  "test": "touch_down",
+  "shots": [
+   "start",
+   "congratulations",
+   "level2"
+  ]
+ },
+ {
+  "id": "sheepdog",
+  "title": "Sheepdog",
+  "author": "K. Semrad",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 8,
+  "pdf_page": 10,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Sheepdog.d68",
+    "label": "main",
+    "load": "0090-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "sheepdog.txt"
+  ],
+  "ram": "1K",
+  "joystick": true,
+  "keys": "Bauer's joystick moves the dog, F barks.",
+  "description": "Use the joystick to drive a dog and herd sheep into the paddock at the top left. A bark makes the nearest sheep run away from the dog. One sheep is lame, the others bolt away and may vanish into the distance as a dot.",
+  "corrections": [
+   "02D8 8?B0 -> 86B0 (a hand-written 6 over the second digit; V6 = VB like 85A0)."
+  ],
+  "doubts": [
+   "The end of the game (all sheep in the paddock) was not tested."
+  ],
+  "status": "playable",
+  "test": "sheepdog",
+  "shots": [
+   "start",
+   "stick_dr",
+   "after_bark"
+  ]
+ },
+ {
+  "id": "craps",
+  "title": "Craps",
+  "author": "R.G. Davis",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 10,
+  "pdf_page": 12,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Craps.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "craps.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Any key throws the dice.",
+  "description": "Two dice are thrown with any key. A first throw of 7 or 11 wins and 2, 3 or 12 loses; any other total becomes your point, and you keep throwing until you hit it (win) or a 7 (lose).",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "craps",
+  "shots": [
+   "start",
+   "throw6",
+   "throw9"
+  ]
+ },
+ {
+  "id": "meteor-storm-gray",
+  "title": "Meteor Storm (Gray)",
+  "author": "T. Gray",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 12,
+  "pdf_page": 14,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Meteor Storm (Gray).d68",
+    "label": "main",
+    "load": "00F0-028F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "meteor_storm_gray.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1 up, 9 down.",
+  "description": "Steer a cruiser up and down through a scrolling meteor storm. You have three ships and the score is the number of meteors dodged. Written by an 11-year-old, and listed as '(Gray)' to tell it apart from the Meteor Storm of issue 17.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "meteor_storm_gray",
+  "shots": [
+   "flying",
+   "up",
+   "later"
+  ]
+ },
+ {
+  "id": "woodworm",
+  "title": "Woodworm",
+  "author": "A. Groves",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 12,
+  "pdf_page": 14,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Woodworm.c8",
+    "label": "main",
+    "load": "0200-02EF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "woodworm.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1 up, 9 down, 6 right.",
+  "description": "A woodworm starts at the left edge of a random forest of softwood and hardwood. Eat your way to the right with the fewest points: 1 point per softwood meal and 6 per hardwood meal. The best score of the series is kept at the bottom right.",
+  "corrections": [
+   "02EA 72 -> FA (the printed 72 is a memory dump left after a game; the article says the best score starts at 250)."
+  ],
+  "doubts": [],
+  "status": "playable",
+  "test": "woodworm",
+  "shots": [
+   "start",
+   "moved",
+   "end"
+  ]
+ },
+ {
+  "id": "cross",
+  "title": "Cross",
+  "author": "Graeme V. Samways",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 15,
+  "pdf_page": 17,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Cross.d68",
+    "label": "main",
+    "load": "0080-03FD",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "cross.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Column 1-7, row 1-7, then 5 up, 8 left, A right, D down.",
+  "description": "Peg solitaire on a cross-shaped board: jump pegs horizontally or vertically over a neighbour into an empty square, removing the jumped peg. Try to leave as few as possible. The bottom score is pegs left and the top is the lowest of the series.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "cross",
+  "shots": [
+   "start",
+   "jump"
+  ]
+ },
+ {
+  "id": "towers-of-hanoi",
+  "title": "Towers of Hanoi",
+  "author": "Russell Yankus",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 16,
+  "pdf_page": 18,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Towers of Hanoi.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "0080"
+   }
+  ],
+  "listings": [
+   "towers_of_hanoi.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold 2-7 for the number of discs, then 1/2/3 for the from and to stacks.",
+  "description": "Move a stack of 2 to 7 discs from the left stack to the right one, never putting a larger disc on a smaller one, using the middle stack as a parking space. Illegal moves are detected and the number of moves is counted and shown at the end. This game starts from address 0080, not C000.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "towers_of_hanoi",
+  "shots": [
+   "loading_screen",
+   "three_moves",
+   "count_b"
+  ]
+ },
+ {
+  "id": "three-dimensional-noughts-and-crosses",
+  "title": "Three Dimensional Noughts and Crosses",
+  "author": "D. Woolnough",
+  "issue": 15,
+  "date": "1981-11",
+  "page": 17,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_15",
+  "files": [
+   {
+    "file": "Three Dimensional Noughts and Crosses.c8",
+    "label": "main",
+    "load": "0200-02F3",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "three_dimensional_noughts_and_crosses.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Row A/B/C then column 1-9 (1-3 left board, 4-6 middle, 7-9 right).",
+  "description": "Three noughts-and-crosses boards side by side, with a win needing one symbol on each board in symmetrical positions. The program only draws the marks and alternates the players, so the players must judge the win themselves. The three boards can also be played individually.",
+  "corrections": [],
+  "doubts": [],
+  "status": "verified",
+  "test": "three_dimensional_noughts_and_crosses",
+  "shots": [
+   "start",
+   "five"
+  ]
+ },
+ {
+  "id": "chase",
+  "title": "Chase",
+  "author": "K. Bolch",
+  "issue": 16,
+  "date": "1981-12",
+  "page": 3,
+  "pdf_page": 5,
+  "archive_item": "dreamer_newsletter_16",
+  "files": [
+   {
+    "file": "Chase.c8",
+    "label": "main",
+    "load": "0200-05FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "chase.txt"
+  ],
+  "ram": "2K",
+  "joystick": true,
+  "keys": "Bauer's joystick.",
+  "description": "Clear all the dots from the maze while avoiding the monsters; you are the square with a dot in its centre. Clearing a dot at the far left or right halves the monsters' speed. Bauer's joystick routine is included at the start of the program.",
+  "corrections": [],
+  "doubts": [
+   "02A0-02B7 is an unused copy of the joystick routine and 0344-034C an unused fragment; left as printed.",
+   "The end of the game (0390) was not reached."
+  ],
+  "status": "verified",
+  "test": "chase",
+  "shots": [
+   "down",
+   "caught",
+   "after"
+  ]
+ },
+ {
+  "id": "time-squash",
+  "title": "Time Squash",
+  "author": "Arthur Hand",
+  "issue": 16,
+  "date": "1981-12",
+  "page": 7,
+  "pdf_page": 9,
+  "archive_item": "dreamer_newsletter_16",
+  "files": [
+   {
+    "file": "Time Squash.c8",
+    "label": "main",
+    "load": "0200-03C3",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "time_squash.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "4 left, 6 right, any key starts.",
+  "description": "A squash game: keep ten balls in play for as long as you can with a racquet at the bottom. A timer on the right shows how long and the balls left appear under it. After ten minutes the timer wraps to 00:00.",
+  "corrections": [],
+  "doubts": [
+   "The erratum printed below the listing belongs to Slide (issue 11)."
+  ],
+  "status": "verified",
+  "test": "time_squash",
+  "shots": [
+   "wait",
+   "later",
+   "gameover"
+  ]
+ },
+ {
+  "id": "tennis",
+  "title": "Tennis",
+  "author": "Darrel Woolnough",
+  "issue": 16,
+  "date": "1981-12",
+  "page": 19,
+  "pdf_page": 21,
+  "archive_item": "dreamer_newsletter_16",
+  "files": [
+   {
+    "file": "Tennis.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "tennis.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Left player: 0 serve/up, C down, 8 in, 4 out. Right player: 3 serve/up, F down, B in, 7 out.",
+  "description": "A two-player tennis game with a court, net, racquets and ball, played to five points a game and six games a match. After hitting the ball you must keep your racquet still until the other player returns it. WIN appears on the winner's side.",
+  "corrections": [
+   "Issue 18 'Modification to Tennis' applied (loser's score was not reset after a set): 02DA 10A0, 02DC 10B0, 02DE 0000, 02E0 0000, 02FE 10A8, 0300 22CC, 0302 6B00, 0304 22CC, 0306 7D01, 0308 6E00, 030A 12F0, 033A-033E 0000, plus new code 0090-00BF."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "tennis",
+  "shots": [
+   "served",
+   "miss2"
+  ]
+ },
+ {
+  "id": "tower-of-hanoi",
+  "title": "Tower of Hanoi",
+  "author": "K. Semrad",
+  "issue": 17,
+  "date": "1982-01",
+  "page": 10,
+  "pdf_page": 19,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Tower Of Hanoi.c8",
+    "label": "main",
+    "load": "0200-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "tower_of_hanoi.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1/2/3 = FROM peg then TO peg; any key restarts.",
+  "description": "Move seven discs from peg 1 to peg 2 or 3, one at a time and never a larger on a smaller. Press the from peg and then the to peg. An illegal move shows an error message, and the win screen shows the move count.",
+  "corrections": [
+   "0372 0A35 -> 6A35 (a machine-code call to non-existent RAM; 6A35 sets the x of the third peg, by symmetry with 6A09 and 6A1F).",
+   "037E 00E0 -> 00EE (the disc routine must return when a slot is empty; with 00E0 it clears the screen and loops forever)."
+  ],
+  "doubts": [
+   "03DE-03DF print 'MOVE' instead of 'MOVES'; left as printed."
+  ],
+  "status": "verified",
+  "test": "tower_of_hanoi",
+  "shots": [
+   "start",
+   "move_1_to_3",
+   "win"
+  ]
+ },
+ {
+  "id": "meteor-storm",
+  "title": "Meteor Storm",
+  "author": "D. Toon",
+  "issue": 17,
+  "date": "1982-01",
+  "page": null,
+  "pdf_page": 34,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Meteor Storm.d68",
+    "label": "main",
+    "load": "0080-067F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "meteor_storm.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "1 left, 2 up, 0 down.",
+  "description": "Your converters can power either the engines or the shields, so you must dodge meteors while moving and stop to raise the shields when you cannot. Dock exactly with the mother ship on the left to finish. Two full-screen pictures show the crash and docking messages.",
+  "corrections": [
+   "0080-00FF and 0200-027F taken from the replacement page in issue 18 (p.4), because the page in issue 17 was misprinted."
+  ],
+  "doubts": [
+   "0100-01FF not printed (zeros); 04E7 = 01 is an isolated pixel, as printed.",
+   "after about 10 s holding 1 (left) the screen goes blank; to be checked on hardware"
+  ],
+  "status": "verified",
+  "test": "meteor_storm",
+  "shots": [
+   "start",
+   "up",
+   "down"
+  ]
+ },
+ {
+  "id": "maze",
+  "title": "Maze",
+  "author": "A. Groves",
+  "issue": 17,
+  "date": "1982-01",
+  "page": null,
+  "pdf_page": 44,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Maze.d68",
+    "label": "main",
+    "load": "0080-00FF, 0200-038F",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "maze.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Hold 1 up, 9 down, 4 left, 6 right.",
+  "description": "Guide a mouse from the top right of a maze to the cheese at the bottom left. Hitting a wall sends it back to the start and costs one of five turns, and there is also a random time limit. If you run out of turns or time, the cat eats the mouse and the program halts.",
+  "corrections": [],
+  "doubts": [
+   "008A is faint and read as 6A00; 00DA read as 6080."
+  ],
+  "status": "verified",
+  "test": "maze",
+  "shots": [
+   "start",
+   "after_wall2",
+   "devoured"
+  ]
+ },
+ {
+  "id": "dogfight",
+  "title": "Dogfight",
+  "author": "G. Clare",
+  "issue": 17,
+  "date": "1982-01",
+  "page": null,
+  "pdf_page": 45,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Dogfight.c8",
+    "label": "main",
+    "load": "0200-03EF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "dogfight.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "8 bank left, A bank right, D dive, 5 climb, F fire, 0 restart.",
+  "description": "Fly a fighter and bring the enemy into your sights; each hit is worth 5 points and shots remaining are shown top right. A white line moving across the top is the time limit: the game ends when it reaches the right or the shots run out.",
+  "corrections": [
+   "03DC 6106 -> 610A (V1 holds the bank-right key, set to 0A by the key table and the article; as printed, key A worked only on the first pass)."
+  ],
+  "doubts": [
+   "Routine 0392-03A3 is never called.",
+   "03C5 enters CHIPOS drawing code; it works."
+  ],
+  "status": "verified",
+  "test": "dogfight",
+  "shots": [
+   "start",
+   "hit_flash",
+   "after_hit"
+  ]
+ },
+ {
+  "id": "three-in-a-row",
+  "title": "Three In A Row",
+  "author": "K. Semrad",
+  "issue": 17,
+  "date": "1982-01",
+  "page": null,
+  "pdf_page": 54,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Three In A Row.c8",
+    "label": "main",
+    "load": "0200-0310",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "three_in_a_row.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "1-6 drop a marble in that column; C restarts after a win.",
+  "description": "A variation of Connect 4 for two players in which you need only three marbles of your colour in a line. Marbles are hollow or solid, and a full column gives a beep.",
+  "corrections": [],
+  "doubts": [
+   "The win check misses one case (the author's logic)."
+  ],
+  "status": "verified",
+  "test": "three_in_a_row",
+  "shots": [
+   "start",
+   "win_vertical",
+   "win_diagonal"
+  ]
+ },
+ {
+  "id": "poker-machine",
+  "title": "Poker Machine",
+  "author": "Tony Horncastle",
+  "issue": 17,
+  "date": "1982-01",
+  "page": null,
+  "pdf_page": 61,
+  "archive_item": "dreamer_newsletter_17",
+  "files": [
+   {
+    "file": "Poker Machine.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "poker_machine.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "0 spin, 1/2/3 hold reel 1/2/3, C cancels holds.",
+  "description": "A three-reel poker machine where any three of a kind pays and you may hold reels if you won nothing last time. You start with 41 credits and each spin costs one. The left score is your credit and the right one the last win.",
+  "corrections": [],
+  "doubts": [
+   "0080-008F and 00D6-00FF not printed (zeros).",
+   "At 0 credits 03AE = F100 returns to the monitor (not tested).",
+   "The first automatic spin does not pay.",
+   "After a win, reel 1 can stay held."
+  ],
+  "status": "playable",
+  "test": "poker_machine",
+  "shots": [
+   "first_spin",
+   "hold_1_3",
+   "spin_with_holds"
+  ]
+ },
+ {
+  "id": "death-trap",
+  "title": "Death Trap",
+  "author": "Mark Lipman",
+  "issue": 19,
+  "date": "1982",
+  "page": 3,
+  "pdf_page": 4,
+  "archive_item": "dreamer_newsletter_19",
+  "files": [
+   {
+    "file": "Death Trap.c8",
+    "label": "main",
+    "load": "0200-02DF",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "death_trap.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "Speed 0-E or F (speeds up), then 8 left, 5 up, A right, D down.",
+  "description": "A snake game in the style of Barrier: make your snake as long as possible while random dots keep appearing. Touching a dot, yourself or the border is fatal. The score is the snake length and any key restarts.",
+  "corrections": [],
+  "doubts": [
+   "The article gives the down-key address as 023E; the byte is at 023F."
+  ],
+  "status": "verified",
+  "test": "death_trap",
+  "shots": [
+   "moving",
+   "rightdown",
+   "end"
+  ]
+ },
+ {
+  "id": "brickwall-blitz",
+  "title": "Brickwall Blitz",
+  "author": "L.M. Flood",
+  "issue": 19,
+  "date": "1982",
+  "page": 3,
+  "pdf_page": 4,
+  "archive_item": "dreamer_newsletter_19",
+  "files": [
+   {
+    "file": "Brickwall Blitz.d68",
+    "label": "main",
+    "load": "0080-03FF",
+    "run": "C000"
+   },
+   {
+    "file": "Brickwall Blitz (high score).d68",
+    "label": "high score",
+    "load": "0080-0433",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "brickwall_blitz.txt",
+   "brickwall_blitz_hiscore.txt"
+  ],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "4 left, 6 right, F fire a caught brick.",
+  "description": "Bricks fall from space and pile up into a wall that you must destroy, by catching bricks with your base and dropping them on it. The game ends when the wall reaches the base and shows the survival time. A high score routine for machines with more than 1K can be added.",
+  "corrections": [
+   "03BD B0 -> BD (the call to the CHIPOS show routine, as in the twin routine at 02F5-0300; otherwise the brick/base test at 035D never draws; not a published erratum).",
+   "High score version: 00AC 0000 -> 1400 and extra routine 0400-0433."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "brickwall_blitz",
+  "shots": [
+   "start",
+   "later",
+   "game-over-time"
+  ]
+ },
+ {
+  "id": "indy-6800",
+  "title": "Indy 6800",
+  "author": "S. Dixon",
+  "issue": 19,
+  "date": "1982",
+  "page": 5,
+  "pdf_page": 6,
+  "archive_item": "dreamer_newsletter_19",
+  "files": [
+   {
+    "file": "Indy 6800.c8",
+    "label": "main",
+    "load": "0200-03C1",
+    "run": "C000"
+   }
+  ],
+  "listings": [
+   "indy_6800.txt"
+  ],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "A straight road or B winding road, 4/6 steer, E accelerate, C brake.",
+  "description": "Two car-race games in one: choose A for a straight road with oncoming cars or B for a winding road. Steer with 4 and 6, accelerate with E and brake with C (only down to the initial speed). After a crash the score shows, with HIGH SCORE if it is the best of the series.",
+  "corrections": [],
+  "doubts": [
+   "The font confuses B/8 and D/0: 0368 = 3D96, 038C = 2B01, 0380 = FF0A.",
+   "The test at 0312 (3FFA) never fires."
+  ],
+  "status": "verified",
+  "test": "indy_6800",
+  "shots": [
+   "game_a",
+   "faster",
+   "game_b"
+  ]
+ }
+]

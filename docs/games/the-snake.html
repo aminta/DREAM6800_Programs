@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Snake – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>The Snake</h1>
+<p class="by">R. Faint · DREAMER no. 3 (1980-11) p. 9 <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/the-snake-1.png" alt="The Snake screen 1" width="512" height="256"><img src="../shots/the-snake-2.png" alt="The Snake screen 2" width="512" height="256"><img src="../shots/the-snake-3.png" alt="The Snake screen 3" width="512" height="256"></div>
+<p class="desc">Guide a growing snake to the big square, worth 8 points per meal, while avoiding the walls, the small square and your own body. A short chime plays at the end if you scored enough. Two published patches slow the game down and move the controls to the 5/8/A/D diamond.</p>
+<h2>Keys</h2><p>1 up, 4 left, 6 right, 9 down (redirected version: 5 up, 8 left, A right, D down); any key restarts.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/The Snake.d68" download>The Snake.d68</a></td><td>main</td><td>0080-03FF</td><td>C000</td></tr><tr><td><a href="../files/The Snake (slow).d68" download>The Snake (slow).d68</a></td><td>slow</td><td>0080-03FF</td><td>C000</td></tr><tr><td><a href="../files/The Snake (redirected).d68" download>The Snake (redirected).d68</a></td><td>redirected keys</td><td>0080-03FF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/the_snake.txt">the_snake.txt</a>, <a href="../listings/the_snake_slow.txt">the_snake_slow.txt</a>, <a href="../listings/the_snake_redirected.txt">the_snake_redirected.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_03/page/n10/mode/1up">DREAMER no. 3 on archive.org</a>, p. 9 (PDF page 11).
+Author: R. Faint.</p>
+<h2>Corrections applied</h2><ul><li>&#x27;Slow&#x27; version: speed patch of issue 4 (&#x27;The Snake by the Tail&#x27;, G.V. Samways): 0360 8F00 -&gt; 8E00, 0364 80F0 -&gt; 80E0, 0374 00EE -&gt; 10F0 (low speed).</li><li>&#x27;Redirected&#x27; version: key patch of issue 8 (&#x27;Redirected Snake&#x27;): 023C 6006-&gt;600A, 024C 6B06-&gt;6B0A, 0252 6A01-&gt;6A05, 02F2 4001-&gt;4005, 0258 6A06-&gt;6A0A, 0272 4B06-&gt;4B0A, 02FE 4006-&gt;400A, 0264 6A04-&gt;6A08, 026A 4B04-&gt;4B08, 02F6 4004-&gt;4008, 025E 6A09-&gt;6A0D, 026E 4B09-&gt;4B0D, 02FA 4009-&gt;400D.</li></ul>
+<h2>Open doubts</h2><p>None.</p></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

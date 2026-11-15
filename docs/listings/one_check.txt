@@ -1,0 +1,35 @@
+# ONE CHECK - G.V. Samways (from a BASIC program by D. Ahl) - DREAMER 2 p.12 - CHIP-8 0200-035B (printed 0200-0400; run C000)
+# Solitaire: 48 checkers on the two outer rings of an 8x8 board; remove as many as possible by
+# diagonal jumps (30-39 easy, 40-44 a challenge, 45-47 a substantial feat). Score = checkers removed.
+# Keys: X coordinate 0-7, then Y 0-7 (cursor shows the checker), then 4 up left, 6 up right,
+#   C down left, E down right; any other key cancels the move.
+# Scan: the key digits in the text are handwritten (4/6/C/E, matching 02E8 3804, 0304 3806,
+#   0320 380C, 0336 380E). Three words are covered by a reader's handwritten calls to his own
+#   routines at 0360-0374 (024A "1360", 025C "1368", 0270 "1370"); reconstructed from his routines,
+#   which start with the original instruction (FC0A / FD0A / F80A) and from the code around them:
+#   024A = FC0A (X key -> VC, then 87C2 tests < 8), 025C = FD0A (Y key -> VD), 0270 = F80A (move key
+#   -> V8, tested by 3804/3806/380C/380E). 0304: a hand-retouched digit, read as 3806.
+# Correction: 02F8 printed 4D04 -> 4B04 (up-left edge test on VB like the other three directions,
+#   4B00/4B04, 4B18/4B1C; 4D04 wrongly refused an up-left jump from row 2 to row 0).
+0200 A2CC 6A00 22C0 7A04 3A20 1204 A2DC 6A00
+0210 22C0 6A04 22C0 6A18 22C0 6A1C 22C0 6B00
+0220 22D0 6B04 22D0 6B18 22D0 6B1C 22D0 6900
+0230 632C 640C A2BC F933 F265 F029 22E0 F129
+0240 22E0 F229 22E0 6608 6708 FC0A 87C2 4700
+0250 1256 F618 1248 8CC4 8CC4 6708 FD0A 87D2
+0260 3700 1252 8DD4 8DD4 A358 DCD4 8EF0 3E00
+0270 F80A DCD4 4E00 1252 8AC0 8BD0 22E8 4E00
+0280 1252 22E8 3E00 1252 A2DC DCD4 6F00 8CA5
+0290 4F00 7C08 7CFC 8CA4 6F00 8DB5 4F00 7D08
+02A0 7DFC 8DB4 DAB4 DCD4 632C 640C F029 22E0
+02B0 F129 22E0 F229 22E0 7901 1230 0000 0000
+02C0 6BFC 7B04 DAB4 3B1C 12C2 00EE 0000 2000
+02D0 6A04 7A04 DAB4 3A14 12D2 00EE 0070 7070
+02E0 D345 7304 00EE 0000 3804 1308 4A00 1354
+02F0 4A04 1354 4B00 1354 4B04 1354 7CFC 7DFC
+0300 DCD4 8EF0 DCD4 00EE 3806 1320 4A18 1354
+0310 4A1C 1354 4B00 1354 4B04 1354 7C04 12FE
+0320 380C 133A 4A00 1354 4A04 1354 4B18 1354
+0330 4B1C 1354 7CFC 7D04 1300 380E 1354 4A18
+0340 1354 4A1C 1354 4B18 1354 4B1C 1354 7C04
+0350 7D04 1300 6E00 00EE 0050 0050 0000 0000

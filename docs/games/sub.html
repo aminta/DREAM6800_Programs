@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sub – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Sub</h1>
+<p class="by">Graeme V. Samways · DREAMER no. 1 (1980-09) p. 7 <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/sub-1.png" alt="Sub screen 1" width="512" height="256"><img src="../shots/sub-2.png" alt="Sub screen 2" width="512" height="256"><img src="../shots/sub-3.png" alt="Sub screen 3" width="512" height="256"></div>
+<p class="desc">You command a submarine hunting enemy ships on the surface, with unlimited torpedoes (one in flight at a time) and depth charges dropped on you. Every ship you sink adds its speed to your score, which is shown when the sub itself is sunk. The issue 9 variant replaces the movement code so that a four-way paddle on keys 5/8/A/D drives the sub.</p>
+<h2>Keys</h2><p>Hold to move: 4/5/6 surface left/stay/right, 8/A left/right, C/D/E dive left/straight/right; fire 0 left, 1 up, 2 right. Eight-direction version: 5/8/A/D (two adjacent keys = diagonal), F fires.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Sub.c8" download>Sub.c8</a></td><td>main</td><td>0200-03FF</td><td>C000</td></tr><tr><td><a href="../files/Sub (Eight Direction).c8" download>Sub (Eight Direction).c8</a></td><td>eight-direction joystick</td><td>0200-03FF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/sub.txt">sub.txt</a>, <a href="../listings/sub_eight_direction.txt">sub_eight_direction.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_01/page/n6/mode/1up">DREAMER no. 1 on archive.org</a>, p. 7 (PDF page 7).
+Author: Graeme V. Samways.</p>
+<h2>Corrections applied</h2><ul><li>Eight-direction version: rows 0230-02BF replaced by the &#x27;Modified Sub Listing&#x27; of issue 9 (printed rows 02B0-02BB are zeros, the rest is the issue 1 listing).</li></ul>
+<h2>Open doubts</h2><ul><li>Diagonal moves need two keys at once and were not tested.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

@@ -1,0 +1,37 @@
+# TIC-TAC-TOE - R. Schmidt - DREAMER 3 p.12 (PDF page 14) - CHIP-8 0200-0352
+# run C000 (FN 3). Two players; the program picks the first player at random (its symbol is shown at
+# the left (X) or right (O) edge). Press the key of the square to place your symbol; a win is detected
+# and the winning symbol flashes. Key F starts a new game (machine-code call 0350 = JMP C000).
+# keys: squares   8 9 A
+#                 4 5 6
+#                 0 1 2
+# (key codes at 0231, 0235, 0239 (bottom row), 023D, 0241, 0245, 0249, 024D, 0251 (top row)).
+# Squares are held in V1-V9 (V1 = top left), the symbol value in VE (X = 01, O = 10); each line is
+# summed in VF (03 = X wins, 30 = O wins). There is no check for an occupied square.
+# The print is very faint: digits were read with the code structure as a guide (8-byte key handlers
+# 0256-029D, line sums 02A0-02E1, sprites 030E/0316, grid line sprite 031E).
+# Correction: DREAMER 4 p.5 - 034A is 3E00, not 3F00 (light printing). Applied.
+# Read by structure where the print is illegible: 0262 6B17 (printed like 6E17), 0306 6A38 (last digit
+# overwritten by hand), 029E/02FE/030A DAB8, 0322 132C.
+0200 A100 FF65 6A1A 6B25 A31E DAC1 DBC1 7C01
+0210 3C20 120A 6A10 6B0A 6C15 DAB1 DAC1 7A01
+0220 3A30 121A C001 4000 22F6 4001 2302 FD0A
+0230 4D00 1256 4D01 125E 4D02 1266 4D04 126E
+0240 4D05 1276 4D06 127E 4D08 1286 4D09 128E
+0250 4D0A 1296 122E 87E0 6A11 6B17 229E 88E0
+0260 6A1C 6B17 229E 89E0 6A27 6B17 229E 84E0
+0270 6A11 6B0C 229E 85E0 6A1C 6B0C 229E 86E0
+0280 6A27 6B0C 229E 81E0 6A11 6B01 229E 82E0
+0290 6A1C 6B01 229E 83E0 6A27 6B01 229E DAB8
+02A0 6F00 8F14 8F24 8F34 2320 8F44 8F54 8F64
+02B0 2320 8F74 8F84 8F94 2320 8F14 8F44 8F74
+02C0 2320 8F24 8F54 8F84 2320 8F34 8F64 8F94
+02D0 2320 8F14 8F54 8F94 2320 8F34 8F54 8F74
+02E0 2320 4000 12EE 2302 22F6 6000 122E 22F6
+02F0 2302 6001 122E A30E 6E01 6A00 6B0C DAB8
+0300 00EE A316 6E10 6A38 6B0C DAB8 00EE 1824
+0310 4281 8142 2418 8142 2418 1824 4281 8000
+0320 4F03 132C 4F30 1338 6F00 00EE 22F6 6D0F
+0330 EDA1 0350 2344 132C 2302 6D0F EDA1 0350
+0340 2344 1338 6E02 FE15 FE07 3E00 1348 00EE
+0350 7E C000

@@ -1,0 +1,16 @@
+# METEOR STORM - T. Gray (11 yrs) - DREAMER 15 p.12 (PDF page 14) - CHIP-8 + 6800, 00F0-028F, run C000
+# Steer your space cruiser through a meteor storm: keys 1 up, 9 down. Three cruisers; the
+# score is the number of meteors dodged (shown at game over). Harder: 0207 = 1A (was 38);
+# easier: a higher value at 022D (08). Key bytes: 0219 (up), 021F (down).
+# 0232-0245 = 6800 subroutine that scrolls the whole screen one pixel left.
+# (Not the Meteor Storm of D. Toon in DREAMER 17-18.)
+00F0 EE7F EEAA 0055 00AA 2870 F870 2800 0506
+0200 6300 6410 6503 6638 00E0 6810 6910 6A00
+0210 A0F0 D343 D343 0232 6B01 EBA1 74FF 6B09
+0220 EBA1 7401 D343 7A01 4F01 1248 4A08 1278
+0230 1214 CE01 FFC6 080C A600 49A7 0009 5A26
+0240 F78C 00FF 26EF 3900 A0F0 D343 A0F3 D345
+0250 6C0F FC18 D345 75FF 4500 125E 1206 A0FD
+0260 F033 F265 F029 00E0 D895 7804 F129 D895
+0270 7804 F229 D895 1276 A0F8 D675 7001 6A00
+0280 A0F0 C71B 6D02 FD15 FD07 3D00 1288 1214

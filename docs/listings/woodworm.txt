@@ -1,0 +1,23 @@
+# WOODWORM - A. Groves - DREAMER 15 p.12 (PDF page 14) - CHIP-8 0200-02EF, run C000
+# A random forest of softwood (dots) and hardwood (blank spaces); the woodworm is a dot on the
+# left edge. Eat your way to the right-hand side in the least number of moves: 1 up, 9 down,
+# 6 right. Penalty: 1 point per meal of softwood, 6 per meal of hardwood. Score top right,
+# best score of the series bottom right. Any key starts a new game.
+# Key bytes: RIGHT 0245, UP 0249, DOWN 024D.
+# Correction: 02EA printed 72 (= 114, with its BCD 01 01 04 at 02EC: a memory dump taken after
+# a game). The article says the best score "starts at 250 when program is loaded": 02EA = FA.
+0200 121C CB1F DAB5 3B01 1202 00EE 7A03 2202
+0210 1222 6A02 CB1F A260 DAB1 1228 6A03 A261
+0220 2202 3A2A 120C 1212 FA18 6500 2266 0000
+0230 0000 22A0 0000 0000 4A2D 1292 6F00 FE0A
+0240 A260 DAB1 4E06 7A01 4E01 7BFF 4E09 7B01
+0250 DAB1 4A2D 1292 4F01 1282 690A F918 128A
+0260 8080 E040 80E0 A22E F533 6331 6402 F265
+0270 F029 D345 7305 F129 D345 7305 F229 D345
+0280 00EE 2266 7501 2266 1234 2266 7506 2266
+0290 1234 6928 F918 22C6 1200 0000 0000 0000
+02A0 A2E2 F755 A2E2 F865 6631 6717 A2EC F833
+02B0 0000 F265 F029 D675 7605 F129 D675 7605
+02C0 F229 D675 00EE 8D80 0000 6F00 8D55 0000
+02D0 3F01 12DC 8850 0000 A2E2 F855 F00A 00E0
+02E0 00EE 0000 003B 0200 3B17 FA00 0101 0400

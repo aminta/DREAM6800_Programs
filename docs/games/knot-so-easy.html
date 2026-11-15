@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Knot-So-Easy – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Knot-So-Easy</h1>
+<p class="by">R. Cameron · DREAMER no. 11 (1981-07) p. 19 <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/knot-so-easy-1.png" alt="Knot-So-Easy screen 1" width="512" height="256"><img src="../shots/knot-so-easy-2.png" alt="Knot-So-Easy screen 2" width="512" height="256"><img src="../shots/knot-so-easy-3.png" alt="Knot-So-Easy screen 3" width="512" height="256"></div>
+<p class="desc">A picture puzzle: a rope drawn as dots in a 4x4 block of squares is jumbled and rotated by the computer. You swap and rotate squares to rebuild it, then press 6 to check. The picture flashes off if wrong and a tone sounds if correct.</p>
+<h2>Keys</h2><p>Co-ordinates x 1-4 then y 1-4 swap a square with its right neighbour, 5 rotates, 6 checks.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Knot-So-Easy.d68" download>Knot-So-Easy.d68</a></td><td>main</td><td>0080-03D5</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/knot_so_easy.txt">knot_so_easy.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_11/page/n20/mode/1up">DREAMER no. 11 on archive.org</a>, p. 19 (PDF page 21).
+Author: R. Cameron.</p>
+<h2>Corrections applied</h2><ul><li>03B9 06 -&gt; C6 (faint C6; with 06 the check crashed).</li></ul>
+<h2>Open doubts</h2><ul><li>0394 BEQ lands on 03B7 and writes 00 into display byte 0139; harmless.</li><li>0285 02A8 has an ink blot on the A; read as printed.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

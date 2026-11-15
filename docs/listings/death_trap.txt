@@ -1,0 +1,22 @@
+# DEATH TRAP - Mark Lipman - DREAMER 19, PDF p.4 (printed p.3).  Load 0200-02DF, run C000 FN 3.
+# Snake game like "Barrier" (DREAMER 1): make your snake of dots as long as possible; random dots keep
+# appearing.  Keys 8 left, 5 up, A right, D down.  Hitting a dot, yourself or the border is fatal.
+# At the start the screen blanks: select the speed 0-E (0 slowest, E fastest); F = start slow and
+# speed up as the game progresses.  At the end the score (snake length, 4 digits) is shown; any key
+# restarts.  Keys can be changed at 02D1 (left), 0245 (right), 0239 (up), 023F (down: the article
+# says 023E, but the key byte of 660D at 023E is 023F).
+# Note: 02AD-02AF ("00 08 00", tail of 8000 0800) is the BCD scratch area of the score display.
+0200 00E0 FC0A 6D00 4C0F 6D01 4C0F 6C00 00E0
+0210 6300 6400 6B00 22B0 6B1F 22B0 6A00 22C0
+0220 6A3F 22C0 CA1F 7A08 CB0F 7B08 C503 A2AC
+0230 0000 22D0 E6A1 6500 6605 E6A1 6501 660D
+0240 E6A1 6502 660A E6A1 6503 4500 7AFF 4501
+0250 7BFF 4502 7B01 4503 7A01 6F00 DAB1 3F01
+0260 1288 00E0 6A18 6B0F FA18 A2AD F433 F265
+0270 F029 DAB5 7A04 F129 DAB5 7A04 F229 DAB5
+0280 7A04 F329 DAB5 1202 7301 430A 7401 3D01
+0290 129A 430A 7C01 4C10 6C0F 430A 6300 6E14
+02A0 8EC5 FE15 FE07 3E00 12A4 1232 8000 0800
+02B0 6A00 A2BE DAB1 7A08 3A40 12B4 00EE FF80
+02C0 6B01 A2BF DAB1 7B01 3B1F 12C4 00EE 0000
+02D0 6608 C03D C11D 7001 7101 D011 00EE 0000

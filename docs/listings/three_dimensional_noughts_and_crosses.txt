@@ -1,0 +1,23 @@
+# THREE DIMENSIONAL NOUGHTS AND CROSSES - D. Woolnough - DREAMER 15 p.17 (PDF page 19)
+# CHIP-8 0200-02F3, run C000. Three noughts-and-crosses boards side by side; a win needs one
+# symbol in each board in symmetrical order (e.g. the same square on all three boards). The two
+# players (A / B, shown top left) use similar but different marks. Enter a square as row A, B or
+# C, then column 1-9 (1-3 left board, 4-6 middle, 7-9 right): e.g. A5, B8. The three games can
+# also be played individually. The program only draws the marks and alternates the players
+# (a mark on an occupied square is refused, same player again); the players judge the win.
+0200 6C02 A29A 6A06 6B0D 228E A2A2 6A0D 228E
+0210 A2AA 6A06 7B07 228E A2B2 6A0D 228E 6A1D
+0220 6B03 3C01 12BA 12C0 FD0A 3D0A 1232 6D0E
+0230 1240 3D0B 123A 6D13 1240 3D0C 1228 6D18
+0240 FE0A 3E01 124A 6E07 1288 3E02 1252 6E0C
+0250 1288 3E03 125A 6E11 1288 3E04 1262 6E1A
+0260 1288 3E05 126A 6E1F 1288 3E06 1272 6E24
+0270 1288 3E07 127A 6E2D 1288 3E08 1282 6E32
+0280 1288 3E09 1228 6E37 3C01 12D2 12E4 DAB7
+0290 7A13 DAB7 7A13 DAB7 00EE 0808 0808 FE08
+02A0 0800 2020 2020 FE20 2000 0808 FE08 0808
+02B0 0800 2020 FE20 2020 2000 A2C6 DAB5 1228
+02C0 A2CC DAB5 1228 2050 88F8 8800 F088 F088
+02D0 F000 A2F0 DED2 3F01 6C01 A2C6 DAB5 6110
+02E0 F118 1222 A2F2 DED2 3F01 7C01 A2CC 12DC
+02F0 C080 40C0

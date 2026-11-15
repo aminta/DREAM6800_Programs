@@ -1,0 +1,15 @@
+# EIGHT DIRECTION JOYSTICK - TEST PROGRAM - Graeme V. Samways - DREAMER 9, PDF pages 15-16 (printed pp.13-14)
+# CHIP-8 0200-022F + 6800 subroutine 0230-0275 (called with 0230). Run C000 FN 3.
+# Needs the 4-directional paddle of DREAMER 8 wired across keys 5/8/A/D; without it press the keys:
+# 5 up, D down, 8 left, A right, two adjacent keys = diagonal (5+8 = 4, 5+A = 6, D+8 = C, D+A = E),
+# F = fire. Shows the direction value (centre 9) and 0, or F while fire is held, at the top left.
+# The subroutine stores the value in V4 (0273 D7 34 STAB $0034); F adds F0.
+# Listing printed with mnemonics; transcribed bytes checked against them. Corrections: none.
+0200 6A00 6B00 0230 8040 610F 62F0 8012 F029
+0210 DAB5 7A05 8422 44F0 640F F429 DAB5 6603
+0220 F615 F607 3600 1222 00E0 1200 0000 0000
+0230 C6 09 CE 80 10 6F 01 86 4A A7 00 86 06 A7 01 86
+0240 FD A7 00 A6 00 84 A0 81 A0 27 08 81 80 27 02 CB
+0250 08 C0 04 86 BF A7 00 A6 00 84 05 81 05 27 08 81
+0260 04 27 02 CB 02 C0 01 86 F7 A7 00 A6 00 84 80 26
+0270 02 CB F0 D7 34 39

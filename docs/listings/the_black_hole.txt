@@ -1,0 +1,27 @@
+# THE BLACK HOLE - Graeme V. Samways - DREAMER 12 p.15 (PDF page 17) - CHIP-8 0200-0313 (printed 0200-0400)
+# run C000 (FN 3). A 3x3 universe: each location is a Black Hole or a Star. Shoot a star with keys 1-9
+# (the location number): it becomes a Black Hole and all other states in its galaxy are complemented.
+# Aim: a central Black Hole surrounded by 8 stars in the minimum number of turns. If the universe
+# becomes all Black Holes you lose and are given a score of 99. 03FD-03FF = BCD work area.
+# Galaxy table 02EE-0311: per key 4 bytes = cell bit (cells 1-4,6-9), centre bit, complement mask,
+# centre mask. Key 7 reads '20C0' at 0306 (centre bit C0 where 00 is expected): harmless, the byte is
+# only ANDed with the centre state 0/1. 0312 00D4 is unused.
+# No corrections: transcribed as printed.
+0200 00E0 6E00 A2E9 67FF 6801 228E 6900 6A00
+0210 A2E4 228E 225A 4E63 12D2 3900 1222 4A00
+0220 12CC 3A00 122A 49FF 12D2 A2EE 2270 4100
+0230 122C 71FF 8114 8114 F11E F365 6402 F418
+0240 8092 3000 124C 81A2 4100 122A 8720 8830
+0250 A2E4 228E 225A 7E01 1214 6520 6608 A3FD
+0260 FE33 F265 F129 D565 7505 F229 D565 00EE
+0270 6109 E1A1 00EE 4100 00EE 71FF 1272 60FF
+0280 61FF 8035 8125 8202 8132 8211 00EE 8370
+0290 8290 227E 8920 8380 82A0 227E 8A20 6409
+02A0 6610 6510 4400 00EE 4405 12C6 4406 12B4
+02B0 3403 12B8 76F8 6510 8774 4F00 12C0 D565
+02C0 75F8 74FF 12A4 4800 12C0 12BE 225A 6E63
+02D0 225A 6002 F018 6F10 FF15 FF07 3F00 12DA
+02E0 12D2 01FF 1C3E 3E3E 1C14 2200 2214 0100
+02F0 0B01 0200 0700 0400 1601 0800 2900 0001
+0300 5A01 1000 9400 20C0 6801 4000 E000 8000
+0310 D001 00D4

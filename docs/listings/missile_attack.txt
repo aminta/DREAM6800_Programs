@@ -1,0 +1,25 @@
+# MISSILE ATTACK - P.E. Marston - DREAMER 4 p.14 (PDF page 14) - CHIP-8 0200-02FF (printed 0200-0300)
+# run C000 (FN 3). Your spacecraft is under attack: evade the missiles, or align the craft with an
+# on-coming missile and fire. A direct hit adds 25 (score shown at the end). The game ends after 10
+# shots or when the craft is hit. You cannot fire unless the craft is stationary or until the previous
+# shot is out of sight. Harder: 0223 = 02. After the score, any key restarts (02FA calls 02FC =
+# machine code JMP C000).
+# keys (as printed): 1 up, 9 down (key codes at 0229, 022F), F fire (027F).
+# The scanned copy has a reader's hand-written swap, NOT applied: 0229 01 -> 09, 022F 09 -> 01
+# (9 up, 1 down), plus 02D4 12F8 -> "1300" and an added row under 02F0 (illegible).
+0200 6E00 6600 670A A2D6 6038 610C D015 A2DB
+0210 6200 C31B 4300 1212 4301 1212 4302 1212
+0220 D233 6401 A2D6 6C00 6D01 EDA1 6CFF 6D09
+0230 EDA1 6C01 D015 81C4 D015 3E01 227C 423A
+0240 1260 A2DB D233 8244 D233 4E01 226A 1224
+0250 6E01 A2DE 6837 8910 77FF D893 6BFF 00EE
+0260 4F01 12B2 A2DB D233 120E A2DE D893 88B4
+0270 D893 4800 1284 4F01 1292 00EE 6D0F EDA1
+0280 2250 00EE D893 228A 1224 6E00 4700 12BA
+0290 00EE D893 6508 F518 7619 A2DB D233 A2E1
+02A0 D234 F518 D234 A2E5 D235 F518 D235 228A
+02B0 120E 650B F518 A2D6 D015 A2F0 F633 F265
+02C0 6419 6500 F029 D455 7405 F129 D455 7405
+02D0 F229 D455 12F8 0F7E FC7E 0F00 00E0 0000
+02E0 8000 5000 5088 0000 0088 0000 0000 0000
+02F0 0000 0000 0000 0000 F00A 02FC 7EC0 0001

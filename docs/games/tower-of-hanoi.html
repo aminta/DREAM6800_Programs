@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tower of Hanoi – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Tower of Hanoi</h1>
+<p class="by">K. Semrad · DREAMER no. 17 (1982-01) p. 10 <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/tower-of-hanoi-1.png" alt="Tower of Hanoi screen 1" width="512" height="256"><img src="../shots/tower-of-hanoi-2.png" alt="Tower of Hanoi screen 2" width="512" height="256"><img src="../shots/tower-of-hanoi-3.png" alt="Tower of Hanoi screen 3" width="512" height="256"></div>
+<p class="desc">Move seven discs from peg 1 to peg 2 or 3, one at a time and never a larger on a smaller. Press the from peg and then the to peg. An illegal move shows an error message, and the win screen shows the move count.</p>
+<h2>Keys</h2><p>1/2/3 = FROM peg then TO peg; any key restarts.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Tower Of Hanoi.c8" download>Tower Of Hanoi.c8</a></td><td>main</td><td>0200-03FF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/tower_of_hanoi.txt">tower_of_hanoi.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_17/page/n18/mode/1up">DREAMER no. 17 on archive.org</a>, p. 10 (PDF page 19).
+Author: K. Semrad.</p>
+<h2>Corrections applied</h2><ul><li>0372 0A35 -&gt; 6A35 (a machine-code call to non-existent RAM; 6A35 sets the x of the third peg, by symmetry with 6A09 and 6A1F).</li><li>037E 00E0 -&gt; 00EE (the disc routine must return when a slot is empty; with 00E0 it clears the screen and loops forever).</li></ul>
+<h2>Open doubts</h2><ul><li>03DE-03DF print &#x27;MOVE&#x27; instead of &#x27;MOVES&#x27;; left as printed.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mine Field Small – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Mine Field Small</h1>
+<p class="by">Graeme V. Samways · DREAMER no. 2 (1980-10) p. 11 <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/mine-field-small-1.png" alt="Mine Field Small screen 1" width="512" height="256"><img src="../shots/mine-field-small-2.png" alt="Mine Field Small screen 2" width="512" height="256"></div>
+<p class="desc">The same game as Mine Field at half scale: a single-pixel cursor on a bigger grid with many more mines. Placing the mines takes a few seconds at the start. Reach the opposite corner with as few hits as possible.</p>
+<h2>Keys</h2><p>5 up, 8 left, A right, D down.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Mine Field Small.c8" download>Mine Field Small.c8</a></td><td>main</td><td>0200-037F</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/mine_field_small.txt">mine_field_small.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_02/page/n10/mode/1up">DREAMER no. 2 on archive.org</a>, p. 11 (PDF page 11).
+Author: Graeme V. Samways.</p>
+<h2>Corrections applied</h2><ul><li>0256 9E40 -&gt; 9348 (erratum in issue 3, B. Ritter; CHIPOS ignores the low nibble of 9XYN, so it works like 9340 in Mine Field).</li></ul>
+<h2>Open doubts</h2><ul><li>0286 is struck through by hand on the scan; read as 3C05 like the other key tests and like Mine Field.</li><li>The article says 100 mines, the code places 50.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

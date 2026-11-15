@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rescue Mission – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Rescue Mission</h1>
+<p class="by">Author not credited · DREAMER no. 8 (1981-04) p. 20 <span class="badge">1K RAM</span><span class="badge">joystick</span></p>
+<div class="shots"><img src="../shots/rescue-mission-1.png" alt="Rescue Mission screen 1" width="512" height="256"><img src="../shots/rescue-mission-2.png" alt="Rescue Mission screen 2" width="512" height="256"><img src="../shots/rescue-mission-3.png" alt="Rescue Mission screen 3" width="512" height="256"></div>
+<p class="desc">Fly a rescue module from the mother ship down to cells on a planet and back, using the analog joystick. Horizontal stick position sets direction and the vertical position controls descent speed; fuel is spent only with the stick at an extreme. Asteroids drift through the scene.</p>
+<h2>Keys</h2><p>Bauer&#x27;s joystick steers the lander; F releases the module from the mother ship and launches it after landing.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Rescue Mission.d68" download>Rescue Mission.d68</a></td><td>main</td><td>0080-03FF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/rescue_mission.txt">rescue_mission.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_08/page/n21/mode/1up">DREAMER no. 8 on archive.org</a>, p. 20 (PDF page 22).
+Author: not credited in the newsletter.</p>
+<h2>Corrections applied</h2><ul><li>00F0 A2C8 -&gt; A2CB (the dot-matrix print looks like 8; with C8 every take-off crashed because the cell sprite XORed away by the landing scan is F8 A8 F8 at 02CB).</li></ul>
+<h2>Open doubts</h2><ul><li>Later layers and the bonus ship were not tested.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

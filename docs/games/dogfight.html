@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dogfight – DREAM 6800</title><link rel="stylesheet" href="../style.css"></head>
+<body><header><a class="home" href="../index.html">DREAM 6800 · DREAMER programs</a></header>
+<main><h1>Dogfight</h1>
+<p class="by">G. Clare · DREAMER no. 17 (1982-01)  <span class="badge">1K RAM</span></p>
+<div class="shots"><img src="../shots/dogfight-1.png" alt="Dogfight screen 1" width="512" height="256"><img src="../shots/dogfight-2.png" alt="Dogfight screen 2" width="512" height="256"><img src="../shots/dogfight-3.png" alt="Dogfight screen 3" width="512" height="256"></div>
+<p class="desc">Fly a fighter and bring the enemy into your sights; each hit is worth 5 points and shots remaining are shown top right. A white line moving across the top is the time limit: the game ends when it reaches the right or the shots run out.</p>
+<h2>Keys</h2><p>8 bank left, A bank right, D dive, 5 climb, F fire, 0 restart.</p>
+<h2>Files</h2><table><tr><th>File</th><th>Version</th><th>Load</th><th>Run</th></tr><tr><td><a href="../files/Dogfight.c8" download>Dogfight.c8</a></td><td>main</td><td>0200-03EF</td><td>C000</td></tr></table>
+<p class="hint">Listing as transcribed (with notes): <a href="../listings/dogfight.txt">dogfight.txt</a></p>
+<h2>Source</h2><p><a href="https://archive.org/details/dreamer_newsletter_17/page/n44/mode/1up">DREAMER no. 17 on archive.org</a> (PDF page 45).
+Author: G. Clare.</p>
+<h2>Corrections applied</h2><ul><li>03DC 6106 -&gt; 610A (V1 holds the bank-right key, set to 0A by the key table and the article; as printed, key A worked only on the first pass).</li></ul>
+<h2>Open doubts</h2><ul><li>Routine 0392-03A3 is never called.</li><li>03C5 enters CHIPOS drawing code; it works.</li></ul></main>
+<footer><p>Programs © their authors, published in the DREAMER newsletter (N.S.W. 6800 Users Group, 1980-82) for DREAM 6800
+owners to type in. Source and author are credited on every page. <b>Removal on request</b>: authors or their heirs can
+<a href="https://github.com/aminta/DREAM6800_Programs/issues">open an issue</a> and the program is taken down. Site code and transcription notes: MIT.</p></footer>
+</body></html>

@@ -740,11 +740,10 @@
   "corrections": [
    "Rows 0390-03F0 left out of 'Kalah' (issue 6: workspace printed in error).",
    "Computer version: issue 16 modification (R. Semrad) applied: 0276 A080, 0284 A086, 0288 A08D, 0290 13DE, 02A2 A07F, 02B2 A07F, 02BA A07F, 0318 A080, 0322 A0FC, 0356 1386, 036E A07F, plus new code 0380-03FF.",
-   "Computer version: 038B A085 -> A086 (erratum in issue 17)."
+   "Computer version: 038B A085 -> A086 (erratum in issue 17).",
+   "Computer version: issue 17 erratum '03CA = E0' applied to 03CB (6080 -> 60E0, a longer pause while the computer thinks); at 03CA it would give E080, an invalid opcode."
   ],
-  "doubts": [
-   "The issue 17 erratum '03CA = E0' gives E080, an unknown opcode; 03CB may have been meant."
-  ],
+  "doubts": [],
   "status": "verified",
   "test": "kalah",
   "shots": [
@@ -1849,11 +1848,10 @@
   "keys": "Key a three-digit bank, F spins, C resets.",
   "description": "A four-reel poker machine with a pay table of pairs and runs of 9, 10, J, Q, K, A and 7, where four aces or four sevens are the jackpot. Set a bank by keying three digits, then each spin costs one and the reels stop one by one.",
   "corrections": [
-   "0332 30C6 -> 10C6 and 03EE 39C0 -> 39E0 (amendments published in issue 13)."
+   "0332 30C6 -> 10C6 (amendment in issue 13: the ace never showed on the third wheel).",
+   "03EE 39C0 -> 39F0. The issue 13 amendment says 39E0, but four aces or four sevens add F0, so only 39F0 pays the 1,000 jackpot the amendment was meant to fix (checked in simulation)."
   ],
-  "doubts": [
-   "With 39E0 the jackpot does not pay (four aces or sevens add F0); 39F0 was probably meant. The published value was kept."
-  ],
+  "doubts": [],
   "status": "verified",
   "test": "four_wheel_poker",
   "shots": [

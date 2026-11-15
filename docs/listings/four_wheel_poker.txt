@@ -15,11 +15,12 @@
 # corrections (published by J. Panos in DREAMER 13 p.1 "AMENDMENTS", values checked on the
 # scan of issue 13; the same two words are also corrected by hand on the issue 12 scan):
 #   0332 30C6 -> 10C6  (the ACE on the 3rd wheel never showed up)
-#   03EE 39C0 -> 39E0  (AAAA or 7777 added 240 instead of 1,000)
+#   03EE 39C0 -> 39E0  (AAAA or 7777 added 240 instead of 1,000); applied here as 39F0, see below
 # DOUBT on the second amendment: A,A,A,A and 7,7,7,7 add 78 + 78 = F0 to V9 (03D8/03DC,
 # 03E8/03EC: 7978 read zoomed, = the 120 of the pay table), so 03EE must test F0: with 39E0
 # the counter still gets 240 (tests/four_wheel_poker_jackpot.txt); with 39F0 the jackpot
-# (VE = AA, V9 = 64 -> 1,000) works. Kept 39E0 as published; 39F0 is the likely intent.
+# (VE = AA, V9 = 64 -> 1,000) works. 39F0 applied (Davide 2026-11-15): the amendment's intent
+# (pay 1,000) only works with F0.
 # 'helping hand' from issue 13 (NOT applied): AAAA every spin = 0084: 18 14 02 06, or
 # 7777 = 0084: 0E 05 18 0D, plus 02F2 CF1F -> 1300 (restore CF1F for normal play).
 0080 0001 0B00 0E10 1704 0B02 0100 7E66 7E06
@@ -76,5 +77,5 @@
 03B0 13B8 4D0B 7924 790E 4C02 13C0 3C05 13CE
 03C0 3A0C 13CE 3B03 13CE 4D14 7920 7912 3B14
 03D0 13DE 3C02 13DE 4D06 7978 4A18 7978 3B05
-03E0 13EE 3C18 13EE 4D0D 7978 4A0E 7978 39E0  # 03EE printed 39C0, errata DREAMER 13
+03E0 13EE 3C18 13EE 4D0D 7978 4A0E 7978 39F0  # 03EE printed 39C0, errata DREAMER 13 = 39E0, we use 39F0 (see note)
 03F0 13F6 6EAA 6964 A084 F355 A080 F365 1272

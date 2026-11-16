@@ -1852,7 +1852,7 @@
  {
   "id": "slide",
   "title": "Slide",
-  "author": null,
+  "author": "Joyce Weisbecker",
   "issue": 11,
   "date": "1981-07",
   "page": 22,
@@ -1872,7 +1872,7 @@
   "ram": "1K",
   "joystick": false,
   "keys": "Hold 0 to stop the puck, release to launch.",
-  "description": "Two players slide three pucks each at spots worth 2, 4 and 8 points. The puck bobs up and down at the left; holding 0 freezes it and the longer you hold, the further it slides after release. The highest possible score is 216.",
+  "description": "Two players slide three pucks each at spots worth 2, 4 and 8 points. The puck bobs up and down at the left; holding 0 freezes it and the longer you hold, the further it slides after release. The highest possible score is 216. Printed without an author's name in the DREAMER, it is Joyce Weisbecker's Slide for the RCA COSMAC VIP: the code is the same as the VIP version, apart from the addresses.",
   "corrections": [
    "0382 = 00EE (issue 16 erratum: the last byte was left off the listing; already hand-written on the scan)."
   ],

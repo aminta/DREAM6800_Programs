@@ -36,7 +36,7 @@
  {
   "id": "block-puzzle",
   "title": "Block Puzzle",
-  "author": "Michael J. Bauer",
+  "author": "Joseph Weisbecker",
   "issue": 0,
   "date": "1979",
   "page": null,
@@ -65,12 +65,13 @@
   "shots": [
    "start",
    "jumbled"
-  ]
+  ],
+  "adapted_by": "Michael J. Bauer"
  },
  {
   "id": "kaleidoscope",
   "title": "Kaleidoscope",
-  "author": "Michael J. Bauer",
+  "author": "Joseph Weisbecker",
   "issue": 0,
   "date": "1979",
   "page": null,
@@ -99,7 +100,8 @@
   "shots": [
    "pattern1",
    "pattern2"
-  ]
+  ],
+  "adapted_by": "Michael J. Bauer"
  },
  {
   "id": "random-dots",
@@ -138,7 +140,7 @@
  {
   "id": "ufo-intercept",
   "title": "UFO Intercept",
-  "author": "Michael J. Bauer",
+  "author": "Joseph Weisbecker",
   "issue": 0,
   "date": "1979",
   "page": null,
@@ -167,12 +169,13 @@
   "shots": [
    "start",
    "later"
-  ]
+  ],
+  "adapted_by": "Michael J. Bauer"
  },
  {
   "id": "wipe-off",
   "title": "Wipe Off",
-  "author": "Michael J. Bauer",
+  "author": "Joseph Weisbecker",
   "issue": 0,
   "date": "1979",
   "page": null,
@@ -201,7 +204,8 @@
   "shots": [
    "play",
    "later"
-  ]
+  ],
+  "adapted_by": "Michael J. Bauer"
  },
  {
   "id": "barrier",

@@ -89,7 +89,8 @@ def main():
                  f'DREAMER no. {g["issue"]} ({esc(g["date"])}) {esc(pg)}')
         source = (f'Decoded from <a href="{BAUER_URL}">Michael Bauer\'s original cassette recording</a> '
                   f'(<code>dream6800_programs_mp3.zip</code>); instructions from his article in <i>Electronics Australia</i>, '
-                  f'July 1979. Author: Michael J. Bauer (CHIP-8 programs partly adapted from the RCA COSMAC VIP manual).'
+                  f'July 1979. Author: {esc(g["author"])}'
+                  + (f', adapted for the DREAM 6800 by {esc(g["adapted_by"])} with Weisbecker\'s permission.' if g.get('adapted_by') else '.')
                   if tape else
                   f'<a href="{src}">DREAMER no. {g["issue"]} on archive.org</a>{(", " + esc(pg)) if pg else ""}'
                   f'{(" (PDF page " + str(g["pdf_page"]) + ")") if g.get("pdf_page") else ""}. '
@@ -100,7 +101,7 @@ def main():
         lists = ', '.join(f'<a href="../listings/{esc(l)}">{esc(l)}</a>' for l in g['listings'])
         ul = lambda xs: '<ul>' + ''.join(f'<li>{esc(x)}</li>' for x in xs) + '</ul>' if xs else '<p>None.</p>'
         body = f'''<h1>{esc(g["title"])}</h1>
-<p class="by">{esc(g["author"] or "Author not credited")} · {where} {badges(g)}</p>
+<p class="by">{esc(g["author"] or "Author not credited")}{(", adapted by " + esc(g["adapted_by"])) if g.get("adapted_by") else ""} · {where} {badges(g)}</p>
 <div class="shots">{''.join(f'<img src="../shots/{s}" alt="{esc(g["title"])} screen {i + 1}" width="512" height="256">' for i, s in enumerate(shots))}</div>
 <p class="desc">{esc(g["description"])}</p>
 <h2>Keys</h2><p>{esc(g["keys"])}</p>
@@ -125,7 +126,8 @@ def main():
 CHIPOS, a monitor with a CHIP-8 interpreter. Its users' newsletter, the <b>DREAMER</b> (1980-82), printed dozens of games
 as hex listings to type in. Here they are as ready-to-load files: {ndream} programs, each transcribed from the scans,
 checked and run in a simulation of the machine, together with the {len(games) - ndream} programs Michael Bauer released on
-cassette with the machine ({nfiles} files in all).</p>
+cassette with the machine, four of them games by Joseph Weisbecker, the creator of CHIP-8, that Bauer adapted with his
+permission ({nfiles} files in all).</p>
 <p>Load them in the {(f'<a href="{CORE_URL}">DREAM 6800 MiSTer core</a>' if CORE_PUBLIC else "DREAM 6800 MiSTer core (release coming soon)")} (OSD: Load program) or type them in on real hardware.
 CHIPOS and the machine's history: <a href="{BAUER_URL}">Michael Bauer's DREAM 6800 page</a>.</p>
 <p>Published with the blessing of <b>Michael J. Bauer</b>, the designer of the DREAM 6800, who in November 2026 placed

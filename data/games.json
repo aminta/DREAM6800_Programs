@@ -1,5 +1,209 @@
 [
  {
+  "id": "dream-invaders",
+  "title": "Dream Invaders",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "Dream Invaders.bin",
+    "label": "main",
+    "load": "0200-06FF",
+    "run": "0200"
+   }
+  ],
+  "listings": [],
+  "ram": "2K",
+  "joystick": false,
+  "keys": "0 left, 1 right, 3 fire (in the MiSTer core: OSD Joystick → 0 1 / 3).",
+  "description": "Bauer's own invaders game, written in 6800 machine code rather than CHIP-8: rows of aliens march down while you move your base along the bottom and shoot them. It fills 1.25 KB, so it needs more than the basic 1 KB of RAM.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_dream_invaders",
+  "shots": [
+   "start",
+   "later"
+  ]
+ },
+ {
+  "id": "block-puzzle",
+  "title": "Block Puzzle",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "Block Puzzle.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "2 down, 4 left, 6 right, 8 up: slide a block into the empty square.",
+  "description": "The sixteen hex digits sit in order on a 4×4 board with one empty square. The DREAM shuffles them, then you slide the blocks back into order, one move at a time.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_block_puzzle",
+  "shots": [
+   "start",
+   "jumbled"
+  ]
+ },
+ {
+  "id": "kaleidoscope",
+  "title": "Kaleidoscope",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "Kaleidoscope.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "2, 4, 6, 8 enter a short sequence of moves, 0 starts it. Bauer suggests 44444442220.",
+  "description": "Type a short sequence of moves and the DREAM keeps repeating it, mirrored four ways, to build a moving symmetrical pattern. Adapted from the RCA COSMAC VIP manual.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_kaleidoscope",
+  "shots": [
+   "pattern1",
+   "pattern2"
+  ]
+ },
+ {
+  "id": "random-dots",
+  "title": "Random Dots",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "Random Dots.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "None: just watch.",
+  "description": "A small display demo: the screen slowly fills with random dots.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_random_dots",
+  "shots": [
+   "dots1",
+   "dots2"
+  ]
+ },
+ {
+  "id": "ufo-intercept",
+  "title": "UFO Intercept",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "UFO Intercept.c8",
+    "label": "main",
+    "load": "0200-02FF",
+    "run": "C000"
+   }
+  ],
+  "listings": [],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "4, 5, 6 launch a missile to the left, straight up or to the right.",
+  "description": "Two UFOs, a big one and a small one, cross the sky; shoot them down with missiles from your base. The small UFO is worth more. The score is shown at the end of the game. Adapted from the RCA COSMAC VIP manual.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_ufo_intercept",
+  "shots": [
+   "start",
+   "later"
+  ]
+ },
+ {
+  "id": "wipe-off",
+  "title": "Wipe Off",
+  "author": "Michael J. Bauer",
+  "issue": 0,
+  "date": "1979",
+  "page": null,
+  "pdf_page": null,
+  "archive_item": null,
+  "src_dir": "ref/tapes",
+  "files": [
+   {
+    "file": "Wipe Off.c8",
+    "label": "main",
+    "load": "0200-02CD",
+    "run": "C000"
+   }
+  ],
+  "listings": [],
+  "ram": "1K",
+  "joystick": false,
+  "keys": "4 and 6 serve the ball and move the bat.",
+  "description": "Knock all the dots off the screen with the ball and bat, a CHIP-8 take on Breakout. The score is shown after 20 balls. Bauer's tip: a smaller bat with 02CD = F0, a bat with a hole with E7. Adapted from the RCA COSMAC VIP manual.",
+  "corrections": [
+   "None: decoded byte for byte from the original cassette recording (tools/tape2bin.py in the core)."
+  ],
+  "doubts": [],
+  "status": "verified",
+  "test": "bauer_wipe_off",
+  "shots": [
+   "play",
+   "later"
+  ]
+ },
+ {
   "id": "barrier",
   "title": "Barrier",
   "author": "Graeme V. Samways",
